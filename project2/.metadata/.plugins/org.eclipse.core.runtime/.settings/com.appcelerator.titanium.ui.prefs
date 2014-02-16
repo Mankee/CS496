@@ -1,0 +1,9 @@
+=run
+LAST_LAUNCH_TIMESTAMP=1392488045159
+eclipse.preferences.version=1
+iOS\ build\ and\ deploy\:ConsoleLogLevel=Info
+preference.show.console.onError=true
+preference.studio.perspective.version=103
+project2\:ConsoleLogLevel=Info
+project2\:launchMode=debug
+project2\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.ipad.launchShortcut.iPad Retina

@@ -1,0 +1,109 @@
+Logger started at: Saturday, February 15, 2014 8:52:12 PM PST
+Component: com.appcelerator.titanium.ios.core
+Version: 1.0.0.1388991145
+[52:12.781] Sent: >21*1392526332782*version<
+[52:12.782] Recv: >1392526332782*2*3.2.1.GA<
+[52:12.783] Sent: >45*1392526332783*option*stepFiltersEnabled*false<
+[52:12.783] Recv: >1392526332783<
+[52:12.783] Sent: >36*1392526332784*option*monitorXHR*true<
+[52:12.783] Recv: >1392526332784<
+[52:12.784] Sent: >45*1392526332785*option*suspendOnFirstLine*false<
+[52:12.784] Recv: >1392526332785<
+[52:12.784] Sent: >46*1392526332786*option*suspendOnExceptions*false<
+[52:12.784] Recv: >1392526332786<
+[52:12.784] Sent: >41*1392526332787*option*suspendOnErrors*true<
+[52:12.785] Recv: >1392526332787<
+[52:12.785] Sent: >43*1392526332788*option*suspendOnKeywords*true<
+[52:12.785] Recv: >1392526332788<
+[52:12.785] Sent: >45*1392526332789*option*bypassConstructors*false<
+[52:12.785] Recv: >1392526332789<
+[52:12.785] Sent: >45*1392526332790*option*stepFiltersEnabled*false<
+[52:12.786] Recv: >1392526332790<
+[52:12.786] Sent: >30*1392526332791*detailFormatters<
+[52:12.786] Recv: >1392526332791<
+[52:12.786] Sent: >53*1392526332792*breakpoint*create*app:/net.js*30*1*0**1<
+[52:12.787] Recv: >1392526332792*created<
+[52:12.787] Sent: >53*1392526332793*breakpoint*create*app:/net.js*19*1*0**1<
+[52:12.787] Recv: >1392526332793*created<
+[52:12.787] Sent: >53*1392526332794*breakpoint*create*app:/app.js*29*1*0**1<
+[52:12.788] Recv: >1392526332794*created<
+[52:12.788] Sent: >20*1392526332795*enable<
+[52:12.788] Recv: >1392526332795<
+[52:12.790] Recv: >threads*created*0*kroll$1<
+[52:12.791] Recv: >log*out*[DEBUG] Analytics is enabled = YES<
+[52:12.792] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/app.js, Resource: app_js<
+[52:12.792] Recv: >scripts*created*325786304|app:/app.js||1|29<
+[52:12.793] Recv: >resumed*0*started<
+[52:12.793] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/database.js, Resource: database_js<
+[52:12.793] Recv: >scripts*created*325786080|app:/database.js||1|40<
+[52:12.794] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/userInterface.js, Resource: userInterface_js<
+[52:12.794] Recv: >scripts*created*325786016|app:/userInterface.js||1|221<
+[52:12.795] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/net.js, Resource: net_js<
+[52:12.795] Recv: >scripts*created*325785632|app:/net.js||1|51<
+[52:12.795] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/camera.js, Resource: camera_js<
+[52:12.795] Recv: >scripts*created*325785728|app:/camera.js||1|34<
+[52:12.795] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/photoGallery.js, Resource: photoGallery_js<
+[52:12.795] Recv: >scripts*created*325787360|app:/photoGallery.js||1|20<
+[52:12.797] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/_app_props_.json, Resource: _app_props__json<
+[52:13.17] Recv: >suspended*0*breakpoint*app:/app.js*29<
+[52:13.17] Sent: >22*1392526332796*frames*0<
+[52:13.18] Recv: >1392526332796*0|||app:/app.js|29|false|0|0<
+[52:14.249] Sent: >34*1392526332797*variables*0*frame[0]<
+[52:14.250] Recv: >1392526332797*database|object|nov|[object database]*camera|object|ov|[object Object]*photoGallery|object|ov|[object Object]*mainWindow|object|nov|[object TiUIWindow]*net|object|ov|[object Object]*userInterface|object|ov|[object Object]*console|object|nov|[object TiConsole]<
+[52:18.196] Sent: >11**stepOver*0<
+[52:18.197] Recv: >resumed*0*stepOver<
+[52:18.199] Recv: >log*out*[DEBUG] Application booted in 5508.641005 ms<
+[52:19.199] Recv: >suspended*0*breakpoint*app:/net.js*12<
+[52:19.200] Sent: >22*1392526332798*frames*0<
+[52:19.200] Recv: >1392526332798*0|||app:/net.js|12|false|0|0<
+[52:19.435] Sent: >34*1392526332799*variables*0*frame[0]<
+[52:19.436] Recv: >1392526332799*arguments|object|opnl|[object Arguments]*database|object|nol|[object database]*entries|object|wnol|[object Array]*i|number|wl|0*__OXP|object|ol|[object Object]*sendEverything|object|l|[object Function]*module|object|ol|[object Object]*sendToServer|object|l|[object Function]*exports|object|ol|[object Object]*camera|object|ov|[object Object]*photoGallery|object|ov|[object Object]*mainWindow|object|nov|[object TiUIWindow]*net|object|ov|[object Object]*userInterface|object|ov|[object Object]*console|object|nov|[object TiConsole]<
+[52:32.395] Sent: >52*1392526332800*breakpoint*create*app:/net.js*7*1*0**1<
+[52:32.396] Recv: >1392526332800*created<
+[52:34.805] Sent: >11**stepOver*0<
+[52:34.806] Recv: >resumed*0*stepOver<
+[52:34.806] Recv: >suspended*0*breakpoint*app:/net.js*13<
+[52:34.807] Sent: >22*1392526332801*frames*0<
+[52:34.808] Recv: >1392526332801*0|||app:/net.js|13|false|0|0<
+[52:35.167] Sent: >34*1392526332802*variables*0*frame[0]<
+[52:35.168] Recv: >1392526332802*arguments|object|opnl|[object Arguments]*database|object|nol|[object database]*entries|object|wnol|[object Array]*i|number|wl|0*__OXP|object|ol|[object Object]*sendEverything|object|l|[object Function]*module|object|ol|[object Object]*sendToServer|object|l|[object Function]*exports|object|ol|[object Object]*camera|object|ov|[object Object]*photoGallery|object|ov|[object Object]*mainWindow|object|nov|[object TiUIWindow]*net|object|ov|[object Object]*userInterface|object|ov|[object Object]*console|object|nov|[object TiConsole]<
+[52:35.968] Sent: >11**stepOver*0<
+[52:35.968] Recv: >resumed*0*stepOver<
+[52:35.969] Recv: >suspended*0*breakpoint*app:/net.js*7<
+[52:35.969] Sent: >22*1392526332803*frames*0<
+[52:35.969] Recv: >1392526332803*0|sendEverything|database|app:/net.js|7|false|0|0*1|||app:/net.js|13|false|0|0<
+[52:36.320] Sent: >34*1392526332804*variables*0*frame[0]<
+[52:36.321] Recv: >1392526332804*database|object|nol|[object database]*entries|undefined|wl|undefined*arguments|object|opnl|[object Arguments]*i|undefined|wl|undefined*__OXP|object|ol|[object Object]*sendEverything|object|l|[object Function]*module|object|ol|[object Object]*sendToServer|object|l|[object Function]*exports|object|ol|[object Object]*camera|object|ov|[object Object]*photoGallery|object|ov|[object Object]*mainWindow|object|nov|[object TiUIWindow]*net|object|ov|[object Object]*userInterface|object|ov|[object Object]*console|object|nov|[object TiConsole]<
+[52:45.831] Sent: >11**stepOver*0<
+[52:45.832] Recv: >resumed*0*stepOver<
+[52:45.833] Recv: >suspended*0*breakpoint*app:/net.js*8<
+[52:45.833] Sent: >22*1392526332805*frames*0<
+[52:45.835] Recv: >1392526332805*0|sendEverything|database|app:/net.js|8|false|0|0*1|||app:/net.js|13|false|0|0<
+[52:46.230] Sent: >34*1392526332806*variables*0*frame[0]<
+[52:46.231] Recv: >1392526332806*database|object|nol|[object database]*entries|object|wnol|[object Array]*arguments|object|opnl|[object Arguments]*i|undefined|wl|undefined*__OXP|object|ol|[object Object]*sendEverything|object|l|[object Function]*module|object|ol|[object Object]*sendToServer|object|l|[object Function]*exports|object|ol|[object Object]*camera|object|ov|[object Object]*photoGallery|object|ov|[object Object]*mainWindow|object|nov|[object TiUIWindow]*net|object|ov|[object Object]*userInterface|object|ov|[object Object]*console|object|nov|[object TiConsole]<
+[52:49.721] Sent: >42*1392526332807*variables*0*frame[0].entries<
+[52:49.721] Recv: >1392526332807<
+[52:58.377] Sent: >11**stepOver*0<
+[52:58.377] Recv: >resumed*0*stepOver<
+[52:58.377] Recv: >suspended*0*breakpoint*app:/net.js*12<
+[52:58.378] Sent: >22*1392526332808*frames*0<
+[52:58.378] Recv: >1392526332808*0|sendEverything|database|app:/net.js|12|false|0|0*1|||app:/net.js|13|false|0|0<
+[52:58.695] Sent: >34*1392526332809*variables*0*frame[0]<
+[52:58.696] Recv: >1392526332809*database|object|nol|[object database]*entries|object|wnol|[object Array]*arguments|object|opnl|[object Arguments]*i|number|wl|0*__OXP|object|ol|[object Object]*sendEverything|object|l|[object Function]*module|object|ol|[object Object]*sendToServer|object|l|[object Function]*exports|object|ol|[object Object]*camera|object|ov|[object Object]*photoGallery|object|ov|[object Object]*mainWindow|object|nov|[object TiUIWindow]*net|object|ov|[object Object]*userInterface|object|ov|[object Object]*console|object|nov|[object TiConsole]<
+[52:59.296] Sent: >42*1392526332810*variables*0*frame[0].entries<
+[52:59.297] Recv: >1392526332810<
+[53:3.471] Sent: >45*1392526332811*breakpoint*remove*app:/net.js*7<
+[53:3.472] Recv: >1392526332811*removed<
+[53:5.193] Sent: >46*1392526332812*breakpoint*remove*app:/net.js*19<
+[53:5.194] Recv: >1392526332812*removed<
+[53:6.806] Sent: >36*1392526332813*eval*0*frame[0]*length<
+[53:6.807] Recv: >1392526332813*exception*Can't find variable: length<
+[53:12.913] Sent: >9**resume*0<
+[53:12.914] Recv: >resumed*0*resume<
+[54:22.77] Recv: >suspended*0*breakpoint*app:/net.js*30<
+[54:22.78] Sent: >22*1392526332814*frames*0<
+[54:22.79] Recv: >1392526332814*0||e|app:/net.js|30|false|0|0<
+[54:22.566] Sent: >34*1392526332815*variables*0*frame[0]<
+[54:22.567] Recv: >1392526332815*this|object|no|[object TiNetworkHTTPClientResult]*e|object|ol|[object Object]*arguments|object|opnl|[object Arguments]*json|undefined|wl|undefined*response|undefined|wl|undefined*database|object|nol|[object database]*httpClient|object|nol|[object TiNetworkClient]*onSuccess|object|l|[object Function]*onFail|object|l|[object Function]*entry|object|ol|[object Object]*__OXP|object|ol|[object Object]*sendEverything|object|l|[object Function]*module|object|ol|[object Object]*sendToServer|object|l|[object Function]*exports|object|ol|[object Object]*camera|object|ov|[object Object]*photoGallery|object|ov|[object Object]*mainWindow|object|nov|[object TiUIWindow]*net|object|ov|[object Object]*userInterface|object|ov|[object Object]*console|object|nov|[object TiConsole]<
+[54:27.631] Sent: >46*1392526332816*breakpoint*remove*app:/net.js*30<
+[54:27.631] Recv: >1392526332816*removed<

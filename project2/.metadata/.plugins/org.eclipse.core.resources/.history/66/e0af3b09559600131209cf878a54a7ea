@@ -1,0 +1,19 @@
+var database = require('database');
+var userInterface = require('userInterface');
+var network = require('network');
+
+var mainWindow = userInterface.createMainWindow();
+// mainWindow.refresh(database.listEntries());
+
+// mainWindow.addEventListener('add', function() {
+	// var addWindow = userInterface.createAddWindow();
+	// addWindow.addEventListener('save', function(e) {
+		// addWindow.close();
+		// database.saveEntry(e.entry);
+		// mainWindow.refresh(db.listEntries());
+	// });
+	// addWindow.open();
+// });
+mainWindow.open();
+
+// net.sendWhenPossible(database);
