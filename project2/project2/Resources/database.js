@@ -1,6 +1,6 @@
 function openDatabase() {
 	var database = Ti.Database.open('project2Database');
-	database.execute('CREATE TABLE IF NOT EXISTS diary (id INTEGER PRIMARY KEY, entry TEXT, uploaded INT DEFAULT 0, dateSaved DATETIME DEFAULT CURRENT_TIMESTAMP)');
+	database.execute('CREATE TABLE IF NOT EXISTS gallery (id INTEGER PRIMARY KEY, filename TEXT, latitude TEXT, longitude TEXT, uploaded INT DEFAULT 0, dateSaved DATETIME DEFAULT CURRENT_TIMESTAMP)');
 	return database;
 }
 
@@ -8,12 +8,14 @@ exports.listEntries = function(showOnlyUnflagged) {
 	var items = [];
 	
 	var database = openDatabase();
-	var rs = showOnlyUnflagged ? database.execute('SELECT * from diary where uploaded = 0 order by dateSaved') : database.execute('SELECT * from diary order by dateSaved');
+	var rs = showOnlyUnflagged ? database.execute('SELECT * from gallery where uploaded = 0 order by dateSaved') : database.execute('SELECT * from gallery order by dateSaved');
 	
 	while (rs.isValidRow()) {
 		var item = {
 			id : rs.fieldByName('id'),
-			text : rs.fieldByName('entry'),
+			fileName : rs.fieldByName('filename'),
+			latitude : rs.fieldByName('latitude'),
+			longitude : rs.fieldByName('longitude'),
 			dateSaved : new Date(rs.fieldByName('dateSaved')),
 			uploaded : rs.fieldByName('uploaded')
 		};
@@ -24,15 +26,17 @@ exports.listEntries = function(showOnlyUnflagged) {
 	return items;
 };
 
-exports.saveEntry = function(entryText) {
+exports.saveEntry = function(photoObj) {
 	var database = openDatabase();
-	database.execute('INSERT INTO diary(entry) VALUES (?) ', entryText);
+	database.execute('INSERT INTO gallery(filename) WHERE id=? VALUES (?) ', photoObj.id, photoObj.fileName);
+	databaes.execute('INSERT INTO gallery(latitude) WHERE id=? VALUES (?) ', photoObj.id, photoObj.latitude);
+	database.execute('INSERT INTO gallery(longitude) WHERE id=? VALUES (?) ', photoObj.id, photoObj.longitude);
 	database.close();
 };
 
-exports.flagEntry = function(entryId) {
+exports.flagEntry = function(photoID) {
 	var database = openDatabase();
-	database.execute('UPDATE diary SET uploaded=1 WHERE id=?', entryId);
+	database.execute('UPDATE gallery SET uploaded=1 WHERE id=?', photoID);
 	database.close();
 };
 

@@ -14,13 +14,13 @@ function sendEverything(database) {
 	}, 1000);
 }
 
-function sendToServer(entry, database) {
+function sendToServer(photoObj, database) {
 	function onSuccess() {
-		database.flagEntry(entry.id);
+		database.flagEntry(photoObj.id);
 	}
 	
 	function onFail() {
-		alert("failed to send to server");
+		// Ti.Debug("failed to connect to server");
 	}
 	
 	var httpClient = Ti.Network.createHTTPClient({
@@ -43,8 +43,10 @@ function sendToServer(entry, database) {
 	
 	httpClient.open("POST", "http://localhost:8888/project2_servlet");
 	httpClient.send({
-		text : entry.text,
-		dateSaved : entry.dateSaved.getTime()
+		fileName : photoObj.fileName,
+		latitude : photoObj.latitude,
+		longitude : photoObj.longitude,
+		dateSaved : photoObj.dateSaved.getTime()
 	});
 	
 }

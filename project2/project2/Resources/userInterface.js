@@ -1,5 +1,8 @@
+var TiMap = require('ti.map');
+
 exports.createMainWindow = function() {
-	var window = Ti.UI.createWindow({
+	
+	var window = Titanium.UI.createWindow({
 		backgroundColor : "#FFFFFF",
 		title : "Project2",
 		layout : "vertical",
@@ -7,7 +10,7 @@ exports.createMainWindow = function() {
 	});
 
 	var navView = Ti.UI.createView({
-		height : "100px",
+		height : Ti.UI.SIZE,
 		width : "100%",
 		backgroundColor : "#000080",
 		layout : "horizontal"
@@ -47,6 +50,53 @@ exports.createMainWindow = function() {
 	
 	window.add(navView);
 	
+	
+	
+	var mountainView = TiMap.createAnnotation({
+	    latitude:37.390749,
+	    longitude:-122.081651,
+	    title:"Appcelerator Headquarters",
+	    subtitle:'Mountain View, CA',
+	    pincolor:TiMap.ANNOTATION_RED,
+	    animate:true,
+	    leftButton: '../images/appcelerator_small.png',
+	    myid:1 // Custom property to uniquely identify this annotation.
+	});
+
+	var mapview = TiMap.createView({
+	    mapType: TiMap.STANDARD_TYPE,
+	    region: {latitude:37.390749, longitude:-122.081651,
+	             latitudeDelta:0.01, longitudeDelta:0.01},
+	    animate:true,
+	    regionFit:true,
+	    userLocation:true,
+	    annotations:[mountainView],
+	    height : "75%"
+	});
+
+	window.add(mapview);
+	// Handle click events on any annotations on this map.
+	mapview.addEventListener('click', function(evt) {
+	    Ti.API.info("Annotation " + evt.title + " clicked, id: " + evt.annotation.myid);
+	
+	    // Check for all of the possible names that clicksouce
+	    // can report for the left button/view.
+	    if (evt.clicksource == 'leftButton' || evt.clicksource == 'leftPane' ||
+	        evt.clicksource == 'leftView') {
+	        Ti.API.info("Annotation " + evt.title + ", left button clicked.");
+	    }
+	});
+
+	// For the iOS platform, wait for the complete event to ensure the region is set
+	if (Ti.Platform.name == 'iPhone OS') {
+	    mapview.addEventListener('complete', function(evt){
+	        mapview.region = {
+	            latitude:37.390749, longitude:-122.081651,
+	            latitudeDelta:0.01, longitudeDelta:0.01
+	        };
+	    });
+	}
+	
 	var tableView = Ti.UI.createTableView({
 		data : [],
 		backgroundColor : "#FFFFFF"
@@ -73,15 +123,14 @@ exports.createMainWindow = function() {
 				layout : "horizontal"
 			});
 			
-			// row.add(Ti.UI.createLabel({
-				// height : Ti.UI.SIZE,
-				// width : Ti.UI.SIZE,
-				// text : (entries[i].dateSaved.getMonth() + 1) + '/' + (entries[i].dateSaved.getDate()),
-				// color : "#333399",
-				// left : "10px",
-				// font: { fontSize:28 },
-			// }));
-// 			
+			row.add(Ti.UI.createImageView({
+				height : Ti.UI.SIZE,
+				width : Ti.UI.SIZE,
+				color : "#333399",
+				left : "10px",
+				font: { fontSize:28 },
+			}));
+			
 			row.add(Ti.UI.createLabel({
 				height : Ti.UI.SIZE,
 				width : Ti.UI.SIZE,
@@ -101,6 +150,9 @@ exports.createAddWindow = function() {
 	var window = Ti.UI.createWindow({
 		backgroundColor : "#ffffff",
 		title : "Create Entry",
+		textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+		font: { fontSize:28 },
+		top : 20,
 		layout : "vertical",
 		navBarHidden : true
 	});
@@ -111,7 +163,10 @@ exports.createAddWindow = function() {
 		backgroundColor : "#000080"
 	});
 	navView.add(Ti.UI.createLabel({
-		text : "create new entry"
+		text : "create new entry",
+		textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+		font: { fontSize:28 },
+		top : 20
 	}));
 	var buttonCancel = Ti.UI.createButton({
 		title : "cancel",
@@ -120,6 +175,9 @@ exports.createAddWindow = function() {
 	navView.add(buttonCancel);
 	var buttonCommit = Ti.UI.createButton({
 		title : "Save",
+		textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+		font: { fontSize:28 },
+		top : 20,
 		right : 0
 	});
 	navView.add(buttonCommit);
@@ -130,13 +188,6 @@ exports.createAddWindow = function() {
 		height : Ti.UI.FILL	
 	});
 	window.add(textInput);
-	
-	//dead code
-	var buttonSave = Ti.UI.createButton({
-		title : "OK",
-		height : Ti.UI.SIZE,
-		width : Ti.UI.SIZE
-	});
 	
 	buttonCancel.addEventListener('click', function(){
 		window.close();
@@ -151,70 +202,104 @@ exports.createAddWindow = function() {
 	});
 	return window;
 };
+
+exports.createFullImageWindow = function(image) {
+		var window = Ti.UI.createWindow({
+		backgroundColor : "#FFFFFF",
+		layout : "vertical",
+		navBarHidden : true
+	});
+	
+	var navView = Ti.UI.createView({
+		height : Ti.UI.SIZE,
+		width : "100%",
+		backgroundColor : "#000080",
+		layout : "horizontal"
+	});
 	
 	
-// 	
-// // this sets the background color of the master UIView (when there are no windows/tab groups on it)
-// Titanium.UI.setBackgroundColor('#000');
-// 
-// // create tab group
-// var tabGroup = Titanium.UI.createTabGroup();
-// 
-// 
-// //
-// // create base UI tab and root window
-// //
-// var win1 = Titanium.UI.createWindow({  
-    // title:'Tab 1',
-    // backgroundColor:'#fff'
-// });
-// var tab1 = Titanium.UI.createTab({  
-    // icon:'KS_nav_views.png',
-    // title:'Tab 1',
-    // window:win1
-// });
-// 
-// var label1 = Titanium.UI.createLabel({
-	// color:'#999',
-	// text:'I am Window 1',
-	// font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	// textAlign:'center',
-	// width:'auto'
-// });
-// 
-// win1.add(label1);
-// 
-// //
-// // create controls tab and root window
-// //
-// var win2 = Titanium.UI.createWindow({  
-    // title:'Tab 2',
-    // backgroundColor:'#fff'
-// });
-// var tab2 = Titanium.UI.createTab({  
-    // icon:'KS_nav_ui.png',
-    // title:'Tab 2',
-    // window:win2
-// });
-// 
-// var label2 = Titanium.UI.createLabel({
-	// color:'#999',
-	// text:'I am Window 2',
-	// font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	// textAlign:'center',
-	// width:'auto'
-// });
-// 
-// win2.add(label2);
-// 
-// 
-// 
-// //
-// //  add tabs
-// //
-// tabGroup.addTab(tab1);  
-// tabGroup.addTab(tab2);  
-// 
-// 
-// // open tab group
-// tabGroup.open();
+	var buttonCancel = Ti.UI.createButton({
+		title : "  Cancel  ",
+		textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+		font: { fontSize:28 },
+		color : "white",
+		top : 20,
+	});
+	navView.add(buttonCancel);
+	
+	navView.add(Ti.UI.createLabel({
+		text : "  Latitude  ",
+		textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+		font : { fontSize:28 },
+		color : "white",
+		top : 20
+	}));
+	
+	var latitudeTextArea = Ti.UI.createTextArea({
+		borderWidth: 2,
+		borderColor: '#bbb',
+		borderRadius: 5,
+		color: '#888',
+		font: {fontSize:20, fontWeight:'bold'},
+		keyboardType: Ti.UI.KEYBOARD_NUMBER_PAD,
+		returnKeyType: Ti.UI.RETURNKEY_GO,
+		textAlign: 'left',
+		top: 20,
+		width: 100, 
+		height : Ti.UI.SIZE
+	});
+	navView.add(latitudeTextArea);
+	
+	navView.add(Ti.UI.createLabel({
+		text : "  Longitude  ",
+		textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+		font : { fontSize:28 },
+		color : "white",
+		top : 20
+	}));
+	
+	var longitudeTextArea = Ti.UI.createTextArea({
+		borderWidth: 2,
+		borderColor: '#bbb',
+		borderRadius: 5,
+		color: '#888',
+		font: {fontSize:20, fontWeight:'bold'},
+		keyboardType: Ti.UI.KEYBOARD_NUMBER_PAD,
+		// returnKeyType: Ti.UI.RETURNKEY_GO,
+		textAlign: 'left',
+		top: 20,
+		width: 100, 
+		height : Ti.UI.SIZE
+	});
+	navView.add(longitudeTextArea);
+	
+	var buttonCommit = Ti.UI.createButton({
+		title : "  Save  ",
+		textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+		font: { fontSize:28 },
+		top : 20,
+		right : 0
+	});
+	navView.add(buttonCommit);
+	window.add(navView);
+	
+	var imageView = Ti.UI.createImageView({
+		width : "100%",
+		height : Ti.UI.FILL,	
+		image : image,
+	});
+	window.add(imageView);
+	
+	buttonCancel.addEventListener('click', function(){
+		window.close();
+	});
+	
+	buttonCommit.addEventListener('click', function(){
+		window.fireEvent('savePhoto', {
+			image : imageView.image,
+			longitude : longitudeTextArea.value,
+			latitude : latitudeTextArea.value
+		});
+	});
+	return window;
+};

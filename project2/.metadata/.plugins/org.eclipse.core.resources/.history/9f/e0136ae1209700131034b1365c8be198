@@ -1,0 +1,31 @@
+var database = require('database');
+var userInterface = require('userInterface');
+var net = require('net');
+var camera = require('camera');
+var photoGallery = require('photoGallery');
+
+var mainWindow = userInterface.createMainWindow();
+mainWindow.refresh(database.listEntries());
+
+mainWindow.addEventListener('takePhoto', function(e) {
+	camera.showCamera();
+});
+
+mainWindow.addEventListener('openPhotoGallery', function() {
+	var galleryWindow = userInterface.createGalleryWindow();
+	photoGallery.openPhotoGallery(galleryWindow);
+	galleryWindow.open();
+});
+
+mainWindow.addEventListener('add', function() {
+	var addWindow = userInterface.createAddWindow();
+	addWindow.addEventListener('save', function(e) {
+		addWindow.close();
+		database.saveEntry(e.entry);
+		mainWindow.refresh(database.listEntries());
+	});
+	addWindow.open();
+});
+mainWindow.open();
+
+net.sendWhenPossible(database);
