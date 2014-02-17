@@ -28,7 +28,7 @@ exports.listEntries = function(showOnlyUnflagged) {
 
 exports.saveEntry = function(photoObj) {
 	var database = openDatabase();
-	database.execute('INSERT INTO gallery(imagepath) VALUES (?) ', photoObj.imagePath);
+	database.execute('INSERT INTO gallery(imagepath) VALUES (?) ', photoObj.id, photoObj.imagePath);
 	database.execute('INSERT INTO gallery(latitude) VALUES (?) ', photoObj.latitude);
 	database.execute('INSERT INTO gallery(longitude) VALUES (?) ', photoObj.longitude);
 	database.close();

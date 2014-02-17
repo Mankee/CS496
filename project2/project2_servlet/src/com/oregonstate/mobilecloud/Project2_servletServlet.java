@@ -3,15 +3,17 @@ package com.oregonstate.mobilecloud;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
+import java.util.Map;
 
 import javax.jdo.PersistenceManager;
 import javax.servlet.http.*;
 
-import com.google.appengine.labs.repackaged.org.json.JSONException;
-import com.google.appengine.labs.repackaged.org.json.JSONObject;
+import com.google.appengine.api.blobstore.BlobKey;
 
 @SuppressWarnings("serial")
 public class Project2_servletServlet extends HttpServlet {
+	
+	
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		handle(req, resp);
@@ -24,6 +26,25 @@ public class Project2_servletServlet extends HttpServlet {
 	
 	private void handle(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
+		// Get the image representation
+	    ServletFileUpload upload = new ServletFileUpload();
+	    FileItemIterator iter = upload.getItemIterator(req);
+	    FileItemStream imageItem = iter.next();
+	    InputStream imgStream = imageItem.openStream();
+
+	    // construct our entity objects
+	    Blob imageBlob = new Blob(IOUtils.toByteArray(imgStream));
+	    MyImage myImage = new MyImage(imageItem.getName(), imageBlob);
+
+	    // persist image
+	    PersistenceManager pm = PMF.get().getPersistenceManager();
+	    pm.makePersistent(myImage);
+	    pm.close();
+
+	    // respond to query
+	    res.setContentType("text/plain");
+	    res.getOutputStream().write("OK!".getBytes());
+		
 		String entryText = req.getParameter("text");
 		String strDateSaved = req.getParameter("dateSaved");
 		Date dateSaved = null;
@@ -51,7 +72,7 @@ public class Project2_servletServlet extends HttpServlet {
 		}
 		PrintWriter out = resp.getWriter();
 		resp.setContentType("text/plain");
-		out.print("{\"status\": \"success\"}");
+		out.print("{\"status\": \"" + response + "\"}");
 	}
 }
 

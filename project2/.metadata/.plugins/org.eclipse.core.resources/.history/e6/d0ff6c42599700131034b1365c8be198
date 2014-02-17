@@ -19,13 +19,11 @@ exports.uploadPhotoGallery = function() {
 	});
 };
 
-function storeImage(image) {
-	var currentTime = new Date().getMilliseconds().toString();
- 	var file = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, currentTime + ".png");
-	if(!file.exists()){
-    	file.write(image);
-   }	  
-   return file;
+function saveImageToStorage(image) {
+	 // var file = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, 'default.png');
+    	// if(!file.exists()){
+        	// file.write(image);
+	image.getNativePath();    	
 }
 
 exports.openPhotoGallery = function(window) {
@@ -33,11 +31,13 @@ exports.openPhotoGallery = function(window) {
 		success:function(event) {
 			// called when media returned from the camera
 			Ti.API.debug('Our type was: '+event.mediaType);
-			if(event.mediaType == Ti.Media.MEDIA_TYPE_PHOTO) {		
-				imageFile = storeImage(event.media);
-				var fullImageWindow = userInterface.createFullImageWindow(imageFile);
+			if(event.mediaType == Ti.Media.MEDIA_TYPE_PHOTO) {
+				event.media.getNativePath();
+				savedPhoto = saveImageToStorage(event.media);
+				var fullImageWindow = userInterface.createFullImageWindow(savedPhoto);
 				fullImageWindow.addEventListener('savePhoto', function(e) {		
-					database.saveEntry(e);
+					var imagePath = e.imagePath;
+					// database.saveEntry(e);
 					mainWindow.refresh(database.listEntries());
 					fullImageWindow.close();
 				});

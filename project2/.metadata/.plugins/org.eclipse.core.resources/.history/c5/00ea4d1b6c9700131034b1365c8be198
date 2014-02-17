@@ -20,7 +20,7 @@ function sendToServer(photoObj, database) {
 	}
 	
 	function onFail() {
-		alert("no response from server");
+		// Ti.Debug("failed to connect to server");
 	}
 	
 	var httpClient = Ti.Network.createHTTPClient({
@@ -31,8 +31,6 @@ function sendToServer(photoObj, database) {
 				var json = JSON.parse(response);
 				if (json && json.status && json.status == "success") {
 					onSuccess();
-				} else if(json && json.status && json.status === "nodata") {
-					//do nothing for now
 				} else {
 					onFail();
 				}

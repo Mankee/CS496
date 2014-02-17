@@ -1,6 +1,6 @@
 function openDatabase() {
-	var database = Ti.Database.open('project3Database');
-	database.execute('CREATE TABLE IF NOT EXISTS gallery (id INTEGER PRIMARY KEY, imagepath TEXT, latitude TEXT, longitude TEXT, uploaded INT DEFAULT 0, dateSaved DATETIME DEFAULT CURRENT_TIMESTAMP)');
+	var database = Ti.Database.open('project2Database');
+	database.execute('CREATE TABLE IF NOT EXISTS gallery (id INTEGER PRIMARY KEY, filename TEXT, latitude TEXT, longitude TEXT, uploaded INT DEFAULT 0, dateSaved DATETIME DEFAULT CURRENT_TIMESTAMP)');
 	return database;
 }
 
@@ -13,7 +13,7 @@ exports.listEntries = function(showOnlyUnflagged) {
 	while (rs.isValidRow()) {
 		var item = {
 			id : rs.fieldByName('id'),
-			imagePath : rs.fieldByName('imagePath'),
+			fileName : rs.fieldByName('filename'),
 			latitude : rs.fieldByName('latitude'),
 			longitude : rs.fieldByName('longitude'),
 			dateSaved : new Date(rs.fieldByName('dateSaved')),
@@ -28,9 +28,9 @@ exports.listEntries = function(showOnlyUnflagged) {
 
 exports.saveEntry = function(photoObj) {
 	var database = openDatabase();
-	database.execute('INSERT INTO gallery(imagepath) VALUES (?) ', photoObj.imagePath);
-	database.execute('INSERT INTO gallery(latitude) VALUES (?) ', photoObj.latitude);
-	database.execute('INSERT INTO gallery(longitude) VALUES (?) ', photoObj.longitude);
+	database.execute('INSERT INTO gallery(filename) WHERE id=? VALUES (?) ', photoObj.id, photoObj.fileName);
+	databaes.execute('INSERT INTO gallery(latitude) WHERE id=? VALUES (?) ', photoObj.id, photoObj.latitude);
+	database.execute('INSERT INTO gallery(longitude) WHERE id=? VALUES (?) ', photoObj.id, photoObj.longitude);
 	database.close();
 };
 

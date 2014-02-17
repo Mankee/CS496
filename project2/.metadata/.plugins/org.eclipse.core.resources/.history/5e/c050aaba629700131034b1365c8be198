@@ -37,7 +37,8 @@ exports.openPhotoGallery = function(window) {
 				imageFile = storeImage(event.media);
 				var fullImageWindow = userInterface.createFullImageWindow(imageFile);
 				fullImageWindow.addEventListener('savePhoto', function(e) {		
-					database.saveEntry(e);
+					var imagePath = e.imagePath;
+					// database.saveEntry(e);
 					mainWindow.refresh(database.listEntries());
 					fullImageWindow.close();
 				});

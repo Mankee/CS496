@@ -297,7 +297,7 @@ exports.createFullImageWindow = function(image) {
 	buttonCommit.addEventListener('click', function(){
 		window.fireEvent('savePhoto', {
 			image : imageView.image,
-			imagePath : imageView.image.nativePath,
+			imagePath : image.nativePath,
 			longitude : longitudeTextArea.value,
 			latitude : latitudeTextArea.value
 		});

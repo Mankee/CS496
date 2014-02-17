@@ -13,7 +13,7 @@ exports.listEntries = function(showOnlyUnflagged) {
 	while (rs.isValidRow()) {
 		var item = {
 			id : rs.fieldByName('id'),
-			imagePath : rs.fieldByName('imagePath'),
+			imagePath : rs.fieldByName('imagepath'),
 			latitude : rs.fieldByName('latitude'),
 			longitude : rs.fieldByName('longitude'),
 			dateSaved : new Date(rs.fieldByName('dateSaved')),
@@ -28,8 +28,8 @@ exports.listEntries = function(showOnlyUnflagged) {
 
 exports.saveEntry = function(photoObj) {
 	var database = openDatabase();
-	database.execute('INSERT INTO gallery(imagepath) VALUES (?) ', photoObj.imagePath);
-	database.execute('INSERT INTO gallery(latitude) VALUES (?) ', photoObj.latitude);
+	// database.execute('INSERT INTO gallery(imagepath) VALUES (?) ', photoObj.imagePath);
+	databaes.execute('INSERT INTO gallery(latitude) VALUES (?) ',  photoObj.latitude);
 	database.execute('INSERT INTO gallery(longitude) VALUES (?) ', photoObj.longitude);
 	database.close();
 };

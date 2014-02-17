@@ -19,25 +19,15 @@ exports.uploadPhotoGallery = function() {
 	});
 };
 
-function storeImage(image) {
-	var currentTime = new Date().getMilliseconds().toString();
- 	var file = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, currentTime + ".png");
-	if(!file.exists()){
-    	file.write(image);
-   }	  
-   return file;
-}
-
 exports.openPhotoGallery = function(window) {
 		Titanium.Media.openPhotoGallery({
 		success:function(event) {
 			// called when media returned from the camera
 			Ti.API.debug('Our type was: '+event.mediaType);
-			if(event.mediaType == Ti.Media.MEDIA_TYPE_PHOTO) {		
-				imageFile = storeImage(event.media);
-				var fullImageWindow = userInterface.createFullImageWindow(imageFile);
-				fullImageWindow.addEventListener('savePhoto', function(e) {		
-					database.saveEntry(e);
+			if(event.mediaType == Ti.Media.MEDIA_TYPE_PHOTO) {
+				var fullImageWindow = userInterface.createFullImageWindow(event.media);
+				fullImageWindow.addEventListener('savePhoto', function(photoObj) {		
+					database.saveEntry(photoObj);
 					mainWindow.refresh(database.listEntries());
 					fullImageWindow.close();
 				});

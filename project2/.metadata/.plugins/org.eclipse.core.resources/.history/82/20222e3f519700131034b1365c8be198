@@ -19,7 +19,7 @@ mainWindow.addEventListener('add', function() {
 	var addWindow = userInterface.createAddWindow();
 	addWindow.addEventListener('save', function(e) {
 		addWindow.close();
-		database.saveEntry(e);
+		database.saveEntry(e.entry);
 		mainWindow.refresh(database.listEntries());
 	});
 	addWindow.open();

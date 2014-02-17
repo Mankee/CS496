@@ -1,6 +1,6 @@
 function openDatabase() {
 	var database = Ti.Database.open('project3Database');
-	database.execute('CREATE TABLE IF NOT EXISTS gallery (id INTEGER PRIMARY KEY, imagepath TEXT, latitude TEXT, longitude TEXT, uploaded INT DEFAULT 0, dateSaved DATETIME DEFAULT CURRENT_TIMESTAMP)');
+	database.execute('CREATE TABLE IF NOT EXISTS gallery (id INTEGER PRIMARY KEY, imagePath TEXT, latitude TEXT, longitude TEXT, uploaded INT DEFAULT 0, dateSaved DATETIME DEFAULT CURRENT_TIMESTAMP)');
 	return database;
 }
 
@@ -28,9 +28,9 @@ exports.listEntries = function(showOnlyUnflagged) {
 
 exports.saveEntry = function(photoObj) {
 	var database = openDatabase();
-	database.execute('INSERT INTO gallery(imagepath) VALUES (?) ', photoObj.imagePath);
-	database.execute('INSERT INTO gallery(latitude) VALUES (?) ', photoObj.latitude);
-	database.execute('INSERT INTO gallery(longitude) VALUES (?) ', photoObj.longitude);
+	database.execute('INSERT INTO gallery(filename) WHERE id=? VALUES (?) ', photoObj.id, photoObj.image.nativePath);
+	databaes.execute('INSERT INTO gallery(latitude) WHERE id=? VALUES (?) ', photoObj.id, photoObj.latitude);
+	database.execute('INSERT INTO gallery(longitude) WHERE id=? VALUES (?) ', photoObj.id, photoObj.longitude);
 	database.close();
 };
 

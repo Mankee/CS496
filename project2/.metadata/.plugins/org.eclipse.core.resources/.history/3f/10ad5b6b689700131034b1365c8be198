@@ -9,9 +9,9 @@ function sendEverything(database) {
 			sendToServer(entries[i], database);
 	}
 	
-	// setTimeout(function(){
-		// sendEverything(database);
-	// }, 5000);
+	setTimeout(function(){
+		sendEverything(database);
+	}, 5000);
 }
 
 function sendToServer(photoObj, database) {
@@ -20,7 +20,7 @@ function sendToServer(photoObj, database) {
 	}
 	
 	function onFail() {
-		alert("no response from server");
+		// Ti.Debug("failed to connect to server");
 	}
 	
 	var httpClient = Ti.Network.createHTTPClient({
@@ -31,8 +31,6 @@ function sendToServer(photoObj, database) {
 				var json = JSON.parse(response);
 				if (json && json.status && json.status == "success") {
 					onSuccess();
-				} else if(json && json.status && json.status === "nodata") {
-					//do nothing for now
 				} else {
 					onFail();
 				}
@@ -43,7 +41,7 @@ function sendToServer(photoObj, database) {
 		timeout : 5000
 	});
 	
-	httpClient.open("POST", "http://localhost:8888/project2_servlet");
+	httpClient.open("POST", "http://localhost:8888/upload");
 	httpClient.send({
 		image : photoObj.image,
 		imagePath : photoObj.imagePath,

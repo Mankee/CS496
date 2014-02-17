@@ -13,6 +13,6 @@
 <booleanAttribute key="overrideDebugPreferences" value="false"/>
 <stringAttribute key="process_factory_id" value="com.appcelerator.titanium.ui.logLevelFilteringProcessFactory"/>
 <stringAttribute key="sdk_version" value="7.0.3"/>
-<stringAttribute key="simulator_debug_config" value="192.168.1.2:57112"/>
+<stringAttribute key="simulator_debug_config" value="192.168.1.2:61111"/>
 <stringAttribute key="simulator_version" value="7.0.3"/>
 </launchConfiguration>
