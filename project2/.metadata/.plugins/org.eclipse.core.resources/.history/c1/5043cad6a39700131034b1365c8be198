@@ -1,7 +1,5 @@
-var TiMap = require('ti.map');
-
 function openDatabase() {
-	var database = Ti.Database.open('Database3');
+	var database = Ti.Database.open('Database2');
 	database.execute('CREATE TABLE IF NOT EXISTS gallery (id INTEGER PRIMARY KEY, imagepath TEXT, latitude TEXT, longitude TEXT, uploaded INT DEFAULT 0, dateSaved DATETIME DEFAULT CURRENT_TIMESTAMP)');
 	return database;
 }

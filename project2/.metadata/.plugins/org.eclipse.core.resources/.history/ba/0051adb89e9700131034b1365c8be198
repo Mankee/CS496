@@ -1,23 +1,20 @@
 exports.sendWhenPossible = function(database) {
-	sendEverything(database);
+	// sendEverything(database);
 };
 
 function sendEverything(database) {
 	if (Titanium.Network.networkType != Titanium.Network.NETWORK_NONE) {
 		var entries = database.listEntries(true);
-		for (var i = 0; i < entries.length; i++) {
-			if (entries[i].latitude && entries[i].longitude && entries[i].latitude.length() > 0  && entries[i].longitude.length() > 0) {
-				sendToServer(entries[i], database);
-			}
-		}
+		for (var i = 0; i < entries.length; i++)
+			sendToServer(entries[i], database);
 	}
 	
-	setTimeout(function(){
-		sendEverything(database);
-	}, 5000);
+	// setTimeout(function(){
+		// sendEverything(database);
+	// }, 5000);
 }
 
-function sendToServer (photoObj, database) {
+exports.sendToServer = function (photoObj, database) {
 	function onSuccess() {
 		database.flagEntry(photoObj.id);
 	}
@@ -35,7 +32,7 @@ function sendToServer (photoObj, database) {
 				if (json && json.status && json.status == "success") {
 					onSuccess();
 				} else if(json && json.status && json.status === "nodata") {
-					log.out("nodata");
+					//do nothing for now
 				} else {
 					onFail();
 				}
@@ -54,8 +51,8 @@ function sendToServer (photoObj, database) {
 		image : photoObj.image,
 		imagePath : photoObj.imagePath,
 		latitude : photoObj.latitude,
-		longitude : photoObj.longitude,
-		dateSaved : photoObj.dateSaved
+		longitude : photoObj.longitude
+		// dateSaved : photoObj.dateSaved.getTime()
 	});
 	
 };

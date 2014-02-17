@@ -1077,3 +1077,140 @@ org.eclipse.swt.SWTException: Widget is disposed
 
 !ENTRY com.aptana.js.debug.core 1 0 2014-02-16 22:19:05.071
 !MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 22:24:43.458
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 22:42:58.723
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 22:43:45.518
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 22:45:28.456
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY org.eclipse.debug.core 4 2 2014-02-16 22:49:55.228
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.SWT.error(SWT.java:4283)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:783)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:903)
+	at com.aptana.js.debug.ui.internal.views.AJAXMonitorView.handleDebugEvents(AJAXMonitorView.java:209)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1132)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1166)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:430)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.debug.core 4 125 2014-02-16 22:49:55.229
+!MESSAGE An exception occurred while dispatching debug events.
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.SWT.error(SWT.java:4283)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:783)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:903)
+	at com.aptana.js.debug.ui.internal.views.AJAXMonitorView.handleDebugEvents(AJAXMonitorView.java:209)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1132)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1166)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:430)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 22:50:02.043
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 22:50:59.926
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 22:53:47.030
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 22:58:18.089
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 23:05:41.347
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 23:17:36.877
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 23:19:37.092
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 23:23:44.723
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 23:28:05.145
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 23:28:28.004
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 23:33:25.518
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 23:36:05.555
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 23:47:57.672
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 23:50:03.016
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 23:51:37.101
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 23:52:17.890
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 23:52:50.078
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 23:56:03.517
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 23:56:37.475
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 23:57:05.159
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-16 23:59:23.813
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-17 00:02:42.732
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-17 00:05:45.918
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-17 00:06:41.600
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-17 00:09:57.443
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-17 00:10:42.035
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-17 00:12:08.624
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-17 00:15:23.553
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-17 00:19:46.572
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-17 00:21:02.550
+!MESSAGE Extension version: 3.2.1.GA; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2014-02-17 00:22:40.314
+!MESSAGE Extension version: 3.2.1.GA; protocol v2

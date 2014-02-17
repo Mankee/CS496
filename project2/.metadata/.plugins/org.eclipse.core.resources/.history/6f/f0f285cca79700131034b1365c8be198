@@ -5,11 +5,8 @@ exports.sendWhenPossible = function(database) {
 function sendEverything(database) {
 	if (Titanium.Network.networkType != Titanium.Network.NETWORK_NONE) {
 		var entries = database.listEntries(true);
-		for (var i = 0; i < entries.length; i++) {
-			if (entries[i].latitude && entries[i].longitude && entries[i].latitude.length() > 0  && entries[i].longitude.length() > 0) {
-				sendToServer(entries[i], database);
-			}
-		}
+		for (var i = 0; i < entries.length; i++)
+			sendToServer(entries[i], database);
 	}
 	
 	setTimeout(function(){

@@ -52,17 +52,17 @@ exports.createMainWindow = function() {
 	
 	
 	
-	var test = database.listEntries();
+	
 
 	var mapview = TiMap.createView({
-	    mapType: TiMap.NORMAL_TYPE,
-	    region: {latitude:44.56734, longitude:-123.27853,
+	    mapType: TiMap.STANDARD_TYPE,
+	    region: {latitude:37.390749, longitude:-122.081651,
 	             latitudeDelta:0.01, longitudeDelta:0.01},
-	    // animate:true,
+	    animate:true,
 	    regionFit:true,
-	    // userLocation:true,
-	    annotations:test,
-	    height : "100%"
+	    userLocation:true,
+	    annotations:database.listEntries(),
+	    height : "75%"
 	});
 
 	window.add(mapview);
@@ -82,7 +82,7 @@ exports.createMainWindow = function() {
 	if (Ti.Platform.name == 'iPhone OS') {
 	    mapview.addEventListener('complete', function(evt){
 	        mapview.region = {
-	            latitude:37.390749, longitude:-122.081651,
+	            latitude:44.5646, longitude:123.2757,
 	            latitudeDelta:0.01, longitudeDelta:0.01
 	        };
 	    });

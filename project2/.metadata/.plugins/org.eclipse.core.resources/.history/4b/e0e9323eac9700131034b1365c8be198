@@ -55,14 +55,14 @@ exports.createMainWindow = function() {
 	var test = database.listEntries();
 
 	var mapview = TiMap.createView({
-	    mapType: TiMap.NORMAL_TYPE,
-	    region: {latitude:44.56734, longitude:-123.27853,
-	             latitudeDelta:0.01, longitudeDelta:0.01},
+	    mapType: TiMap.STANDARD_TYPE,
+	    // region: {latitude:44.56734, longitude:-123.27853,
+	             // latitudeDelta:0.01, longitudeDelta:0.01},
 	    // animate:true,
-	    regionFit:true,
+	    // regionFit:true,
 	    // userLocation:true,
 	    annotations:test,
-	    height : "100%"
+	    height : "75%"
 	});
 
 	window.add(mapview);

@@ -3,27 +3,20 @@ package com.oregonstate.mobilecloud;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
-import java.io.StringWriter;
 import java.util.Date;
-import java.util.Map;
 
 import javax.jdo.PersistenceManager;
-import javax.servlet.ServletException;
 import javax.servlet.http.*;
 
 import org.apache.commons.fileupload.*;
-import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.io.IOUtils;
 
-import com.google.appengine.api.blobstore.BlobKey;
 import com.google.appengine.api.datastore.Blob;
 
 @SuppressWarnings("serial")
 public class Project2_servletServlet extends HttpServlet {
-	private String latitude, longitude, imagePath;
-	private Blob imageBlob;
-	private Date dateSaved;
+	private Entry entryObj = new Entry();
 	
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
@@ -39,28 +32,25 @@ public class Project2_servletServlet extends HttpServlet {
 	private void handle(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		// Get the image representation
-
 		try {
 			ServletFileUpload upload = new ServletFileUpload();
 			FileItemIterator iter = upload.getItemIterator(req);
-			// construct our entry objects
-		    
-		    
+			 // construct our entry objects
 		    while (iter.hasNext()) {
 	            FileItemStream item = iter.next();
 	            InputStream itemStream = item.openStream();
-		        Entry entryObj = new Entry();
+		       
 		        String fieldName = item.getFieldName();
 		        switch(fieldName) {
-		        	case "latitude" : latitude = IOUtils.toString(itemStream);
+		        	case "latitude" : entryObj.setLatitude(IOUtils.toString(itemStream));
 		        		break;
-		        	case "longitude" : longitude = IOUtils.toString(itemStream);
+		        	case "longitude" : entryObj.setLongitude(IOUtils.toString(itemStream));
 	        			break;
-		        	case "imagePath" : imagePath = IOUtils.toString(itemStream);
+		        	case "imagePath" : entryObj.setImagePath(IOUtils.toString(itemStream));
 	        			break;
-		        	case "image" : imageBlob = new Blob(IOUtils.toByteArray(itemStream));		        		
+		        	case "image" : entryObj.setImage(new Blob(IOUtils.toByteArray(itemStream)));	        		
 	        			break;
-		        	case "dateSaved" : imagePath = IOUtils.toString(itemStream);
+		        	case "dateSaved" : entryObj.setDateSaved(dateSaved(IOUtils.toString(itemStream)));
         				break;
 		        }
 		    }
@@ -68,36 +58,33 @@ public class Project2_servletServlet extends HttpServlet {
 		} catch (Exception e) {
 			throw new IOException();
 		}	
-		
-		Date dateSaved = null;
-		
-//		try {
-//			Long tmp = Long.parseLong(strDateSaved);
-//			dateSaved = new Date(tmp);
-//			
-//		} catch (NumberFormatException nfe) {
-//			dateSaved = new Date();
-//		}
-		String response = "success";
-//		if (latitude != null && latitude.length() > 0) {
-//			response = "fail";
-//			Entry entry = new Entry(latitude, dateSaved);
-//			PersistenceManager pm = PMF.getPMF().getPersistenceManager();
-//			try {
-//				pm.makePersistent(entry);
-//				response = "success";
-//			} finally {
-//				pm.close();
-//			}
-//		} else {
-//			response = "nodata";
-//		}
-
 	
+		PersistenceManager pm = PMF.getPMF().getPersistenceManager();
+		String response = "fail";
+		try {
+			pm.makePersistent(entryObj);
+			response = "success";
+			pm.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 		PrintWriter out = resp.getWriter();
 		resp.setContentType("text/plain");
 		out.print("{\"status\": \"" + response + "\"}");
+	} 
 		
+		
+	private Date dateSaved(String strDateSaved) {
+		Date dateSaved = null;
+		try {
+			Long tmp = Long.parseLong(strDateSaved);
+			dateSaved = new Date(tmp);
+			
+		} catch (NumberFormatException nfe) {
+			dateSaved = new Date();
+		}
+		return dateSaved;
 	}
 }
 

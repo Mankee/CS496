@@ -59,7 +59,7 @@ exports.createMainWindow = function() {
 	    region: {latitude:44.56734, longitude:-123.27853,
 	             latitudeDelta:0.01, longitudeDelta:0.01},
 	    // animate:true,
-	    regionFit:true,
+	    // regionFit:true,
 	    // userLocation:true,
 	    annotations:test,
 	    height : "100%"

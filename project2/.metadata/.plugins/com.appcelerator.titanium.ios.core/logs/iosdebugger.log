@@ -1,52 +1,50 @@
-Logger started at: Sunday, February 16, 2014 10:19:05 PM PST
+Logger started at: Monday, February 17, 2014 12:22:40 AM PST
 Component: com.appcelerator.titanium.ios.core
 Version: 1.0.0.1388991145
-[19:5.70] Sent: >21*1392617945071*version<
-[19:5.71] Recv: >1392617945071*2*3.2.1.GA<
-[19:5.71] Sent: >36*1392617945072*option*monitorXHR*true<
-[19:5.72] Recv: >1392617945072<
-[19:5.72] Sent: >45*1392617945073*option*stepFiltersEnabled*false<
-[19:5.73] Recv: >1392617945073<
-[19:5.73] Sent: >45*1392617945074*option*suspendOnFirstLine*false<
-[19:5.73] Recv: >1392617945074<
-[19:5.73] Sent: >46*1392617945075*option*suspendOnExceptions*false<
-[19:5.74] Recv: >1392617945075<
-[19:5.74] Sent: >41*1392617945076*option*suspendOnErrors*true<
-[19:5.74] Recv: >1392617945076<
-[19:5.74] Sent: >43*1392617945077*option*suspendOnKeywords*true<
-[19:5.74] Recv: >1392617945077<
-[19:5.75] Sent: >45*1392617945078*option*bypassConstructors*false<
-[19:5.75] Recv: >1392617945078<
-[19:5.75] Sent: >45*1392617945079*option*stepFiltersEnabled*false<
-[19:5.75] Recv: >1392617945079<
-[19:5.75] Sent: >30*1392617945080*detailFormatters<
-[19:5.76] Recv: >1392617945080<
-[19:5.76] Sent: >64*1392617945081*breakpoint*create*app:/userInterface.js*303*1*0**1<
-[19:5.76] Recv: >1392617945081*created<
-[19:5.76] Sent: >64*1392617945082*breakpoint*create*app:/userInterface.js*298*0*0**1<
-[19:5.77] Recv: >1392617945082*created<
-[19:5.77] Sent: >64*1392617945083*breakpoint*create*app:/userInterface.js*297*0*0**1<
-[19:5.77] Recv: >1392617945083*created<
-[19:5.77] Sent: >20*1392617945084*enable<
-[19:5.78] Recv: >1392617945084<
-[19:5.80] Recv: >threads*created*0*kroll$1<
-[19:5.81] Recv: >log*out*[DEBUG] Analytics is enabled = YES<
-[19:5.82] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/app.js, Resource: app_js<
-[19:5.82] Recv: >scripts*created*317774528|app:/app.js||1|29<
-[19:5.82] Recv: >resumed*0*started<
-[19:5.83] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/database.js, Resource: database_js<
-[19:5.83] Recv: >scripts*created*317774304|app:/database.js||1|44<
-[19:5.84] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/userInterface.js, Resource: userInterface_js<
-[19:5.84] Recv: >scripts*created*317774240|app:/userInterface.js||1|307<
-[19:5.85] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/ti.map.js, Resource: ti_map_js<
-[19:5.85] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/net.js, Resource: net_js<
-[19:5.85] Recv: >scripts*created*317775840|app:/net.js||1|59<
-[19:5.85] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/camera.js, Resource: camera_js<
-[19:5.85] Recv: >scripts*created*317773920|app:/camera.js||1|34<
-[19:5.86] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/photoGallery.js, Resource: photoGallery_js<
-[19:5.86] Recv: >scripts*created*317775264|app:/photoGallery.js||1|67<
-[19:5.88] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/_app_props_.json, Resource: _app_props__json<
-[19:5.499] Recv: >log*out*[DEBUG] Application booted in 525.702953 ms<
-[19:9.269] Recv: >log*out*[debug] Our type was: public.image<
-[19:49.391] Recv: >log*out*[debug] Our type was: public.image<
+[22:40.313] Sent: >21*1392625360313*version<
+[22:40.313] Recv: >1392625360313*2*3.2.1.GA<
+[22:40.314] Sent: >45*1392625360314*option*stepFiltersEnabled*false<
+[22:40.315] Recv: >1392625360314<
+[22:40.315] Sent: >36*1392625360315*option*monitorXHR*true<
+[22:40.315] Recv: >1392625360315<
+[22:40.315] Sent: >45*1392625360316*option*suspendOnFirstLine*false<
+[22:40.315] Recv: >1392625360316<
+[22:40.316] Sent: >46*1392625360317*option*suspendOnExceptions*false<
+[22:40.316] Recv: >1392625360317<
+[22:40.316] Sent: >41*1392625360318*option*suspendOnErrors*true<
+[22:40.316] Recv: >1392625360318<
+[22:40.316] Sent: >43*1392625360319*option*suspendOnKeywords*true<
+[22:40.317] Recv: >1392625360319<
+[22:40.317] Sent: >45*1392625360320*option*bypassConstructors*false<
+[22:40.317] Recv: >1392625360320<
+[22:40.317] Sent: >45*1392625360321*option*stepFiltersEnabled*false<
+[22:40.317] Recv: >1392625360321<
+[22:40.317] Sent: >30*1392625360322*detailFormatters<
+[22:40.318] Recv: >1392625360322<
+[22:40.318] Sent: >64*1392625360323*breakpoint*create*app:/userInterface.js*295*1*0**1<
+[22:40.318] Recv: >1392625360323*created<
+[22:40.319] Sent: >64*1392625360324*breakpoint*create*app:/userInterface.js*289*0*0**1<
+[22:40.319] Recv: >1392625360324*created<
+[22:40.319] Sent: >64*1392625360325*breakpoint*create*app:/userInterface.js*288*0*0**1<
+[22:40.319] Recv: >1392625360325*created<
+[22:40.319] Sent: >20*1392625360326*enable<
+[22:40.320] Recv: >1392625360326<
+[22:40.321] Recv: >threads*created*0*kroll$1<
+[22:40.322] Recv: >log*out*[DEBUG] Analytics is enabled = YES<
+[22:40.323] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/app.js, Resource: app_js<
+[22:40.323] Recv: >scripts*created*334482112|app:/app.js||1|29<
+[22:40.324] Recv: >resumed*0*started<
+[22:40.324] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/database.js, Resource: database_js<
+[22:40.325] Recv: >scripts*created*334481888|app:/database.js||1|57<
+[22:40.325] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/ti.map.js, Resource: ti_map_js<
+[22:40.325] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/userInterface.js, Resource: userInterface_js<
+[22:40.326] Recv: >scripts*created*334481824|app:/userInterface.js||1|299<
+[22:40.326] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/net.js, Resource: net_js<
+[22:40.327] Recv: >scripts*created*334481408|app:/net.js||1|62<
+[22:40.327] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/camera.js, Resource: camera_js<
+[22:40.327] Recv: >scripts*created*334481472|app:/camera.js||1|34<
+[22:40.327] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/photoGallery.js, Resource: photoGallery_js<
+[22:40.328] Recv: >scripts*created*334482880|app:/photoGallery.js||1|66<
+[22:40.330] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/_app_props_.json, Resource: _app_props__json<
+[22:40.657] Recv: >log*out*[DEBUG] Application booted in 437.349021 ms<
 ----------End of file----------
