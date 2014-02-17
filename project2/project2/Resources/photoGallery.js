@@ -35,10 +35,11 @@ exports.openPhotoGallery = function(window) {
 			Ti.API.debug('Our type was: '+event.mediaType);
 			if(event.mediaType == Ti.Media.MEDIA_TYPE_PHOTO) {		
 				imageFile = storeImage(event.media);
-				var fullImageWindow = userInterface.createFullImageWindow(imageFile);
+				var fullImageWindow = userInterface.createFullImageWindow(event.media, imageFile);
 				fullImageWindow.addEventListener('savePhoto', function(e) {		
 					database.saveEntry(e);
-					mainWindow.refresh(database.listEntries());
+					// mainWindow.refresh(database.listEntries());
+					net.sendToServer(e, database);
 					fullImageWindow.close();
 				});
 				fullImageWindow.open();

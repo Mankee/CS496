@@ -13,7 +13,7 @@ exports.listEntries = function(showOnlyUnflagged) {
 	while (rs.isValidRow()) {
 		var item = {
 			id : rs.fieldByName('id'),
-			imagePath : rs.fieldByName('imagePath'),
+			imagePath : rs.fieldByName('imagepath'),
 			latitude : rs.fieldByName('latitude'),
 			longitude : rs.fieldByName('longitude'),
 			dateSaved : new Date(rs.fieldByName('dateSaved')),

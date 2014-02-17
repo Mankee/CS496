@@ -1,55 +1,52 @@
-Logger started at: Sunday, February 16, 2014 4:44:03 PM PST
+Logger started at: Sunday, February 16, 2014 10:19:05 PM PST
 Component: com.appcelerator.titanium.ios.core
 Version: 1.0.0.1388991145
-[44:3.696] Sent: >21*1392597843697*version<
-[44:3.696] Recv: >1392597843697*2*3.2.1.GA<
-[44:3.697] Sent: >45*1392597843698*option*stepFiltersEnabled*false<
-[44:3.698] Recv: >1392597843698<
-[44:3.698] Sent: >36*1392597843699*option*monitorXHR*true<
-[44:3.698] Recv: >1392597843699<
-[44:3.698] Sent: >45*1392597843700*option*suspendOnFirstLine*false<
-[44:3.699] Recv: >1392597843700<
-[44:3.699] Sent: >46*1392597843701*option*suspendOnExceptions*false<
-[44:3.699] Recv: >1392597843701<
-[44:3.699] Sent: >41*1392597843702*option*suspendOnErrors*true<
-[44:3.699] Recv: >1392597843702<
-[44:3.699] Sent: >43*1392597843703*option*suspendOnKeywords*true<
-[44:3.700] Recv: >1392597843703<
-[44:3.700] Sent: >45*1392597843704*option*bypassConstructors*false<
-[44:3.700] Recv: >1392597843704<
-[44:3.700] Sent: >45*1392597843705*option*stepFiltersEnabled*false<
-[44:3.700] Recv: >1392597843705<
-[44:3.701] Sent: >30*1392597843706*detailFormatters<
-[44:3.701] Recv: >1392597843706<
-[44:3.701] Sent: >64*1392597843707*breakpoint*create*app:/userInterface.js*303*1*0**1<
-[44:3.701] Recv: >1392597843707*created<
-[44:3.702] Sent: >64*1392597843708*breakpoint*create*app:/userInterface.js*298*0*0**1<
-[44:3.702] Recv: >1392597843708*created<
-[44:3.702] Sent: >64*1392597843709*breakpoint*create*app:/userInterface.js*297*0*0**1<
-[44:3.702] Recv: >1392597843709*created<
-[44:3.703] Sent: >53*1392597843710*breakpoint*create*app:/net.js*53*0*0**1<
-[44:3.703] Recv: >1392597843710*created<
-[44:3.703] Sent: >53*1392597843711*breakpoint*create*app:/net.js*32*1*0**1<
-[44:3.703] Recv: >1392597843711*created<
-[44:3.704] Sent: >20*1392597843712*enable<
-[44:3.704] Recv: >1392597843712<
-[44:3.706] Recv: >threads*created*0*kroll$1<
-[44:3.707] Recv: >log*out*[DEBUG] Analytics is enabled = YES<
-[44:3.708] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/app.js, Resource: app_js<
-[44:3.709] Recv: >scripts*created*316488384|app:/app.js||1|29<
-[44:3.709] Recv: >resumed*0*started<
-[44:3.709] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/database.js, Resource: database_js<
-[44:3.710] Recv: >scripts*created*316488160|app:/database.js||1|44<
-[44:3.710] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/userInterface.js, Resource: userInterface_js<
-[44:3.711] Recv: >scripts*created*316488096|app:/userInterface.js||1|307<
-[44:3.712] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/ti.map.js, Resource: ti_map_js<
-[44:3.712] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/net.js, Resource: net_js<
-[44:3.712] Recv: >scripts*created*316487680|app:/net.js||1|56<
-[44:3.712] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/camera.js, Resource: camera_js<
-[44:3.713] Recv: >scripts*created*316487776|app:/camera.js||1|34<
-[44:3.713] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/photoGallery.js, Resource: photoGallery_js<
-[44:3.713] Recv: >scripts*created*316489088|app:/photoGallery.js||1|66<
-[44:3.715] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/_app_props_.json, Resource: _app_props__json<
-[44:35.950] Sent: >46*1392597843713*breakpoint*remove*app:/net.js*32<
-[44:35.951] Recv: >1392597843713*removed<
+[19:5.70] Sent: >21*1392617945071*version<
+[19:5.71] Recv: >1392617945071*2*3.2.1.GA<
+[19:5.71] Sent: >36*1392617945072*option*monitorXHR*true<
+[19:5.72] Recv: >1392617945072<
+[19:5.72] Sent: >45*1392617945073*option*stepFiltersEnabled*false<
+[19:5.73] Recv: >1392617945073<
+[19:5.73] Sent: >45*1392617945074*option*suspendOnFirstLine*false<
+[19:5.73] Recv: >1392617945074<
+[19:5.73] Sent: >46*1392617945075*option*suspendOnExceptions*false<
+[19:5.74] Recv: >1392617945075<
+[19:5.74] Sent: >41*1392617945076*option*suspendOnErrors*true<
+[19:5.74] Recv: >1392617945076<
+[19:5.74] Sent: >43*1392617945077*option*suspendOnKeywords*true<
+[19:5.74] Recv: >1392617945077<
+[19:5.75] Sent: >45*1392617945078*option*bypassConstructors*false<
+[19:5.75] Recv: >1392617945078<
+[19:5.75] Sent: >45*1392617945079*option*stepFiltersEnabled*false<
+[19:5.75] Recv: >1392617945079<
+[19:5.75] Sent: >30*1392617945080*detailFormatters<
+[19:5.76] Recv: >1392617945080<
+[19:5.76] Sent: >64*1392617945081*breakpoint*create*app:/userInterface.js*303*1*0**1<
+[19:5.76] Recv: >1392617945081*created<
+[19:5.76] Sent: >64*1392617945082*breakpoint*create*app:/userInterface.js*298*0*0**1<
+[19:5.77] Recv: >1392617945082*created<
+[19:5.77] Sent: >64*1392617945083*breakpoint*create*app:/userInterface.js*297*0*0**1<
+[19:5.77] Recv: >1392617945083*created<
+[19:5.77] Sent: >20*1392617945084*enable<
+[19:5.78] Recv: >1392617945084<
+[19:5.80] Recv: >threads*created*0*kroll$1<
+[19:5.81] Recv: >log*out*[DEBUG] Analytics is enabled = YES<
+[19:5.82] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/app.js, Resource: app_js<
+[19:5.82] Recv: >scripts*created*317774528|app:/app.js||1|29<
+[19:5.82] Recv: >resumed*0*started<
+[19:5.83] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/database.js, Resource: database_js<
+[19:5.83] Recv: >scripts*created*317774304|app:/database.js||1|44<
+[19:5.84] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/userInterface.js, Resource: userInterface_js<
+[19:5.84] Recv: >scripts*created*317774240|app:/userInterface.js||1|307<
+[19:5.85] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/ti.map.js, Resource: ti_map_js<
+[19:5.85] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/net.js, Resource: net_js<
+[19:5.85] Recv: >scripts*created*317775840|app:/net.js||1|59<
+[19:5.85] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/camera.js, Resource: camera_js<
+[19:5.85] Recv: >scripts*created*317773920|app:/camera.js||1|34<
+[19:5.86] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/photoGallery.js, Resource: photoGallery_js<
+[19:5.86] Recv: >scripts*created*317775264|app:/photoGallery.js||1|67<
+[19:5.88] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/_app_props_.json, Resource: _app_props__json<
+[19:5.499] Recv: >log*out*[DEBUG] Application booted in 525.702953 ms<
+[19:9.269] Recv: >log*out*[debug] Our type was: public.image<
+[19:49.391] Recv: >log*out*[debug] Our type was: public.image<
 ----------End of file----------

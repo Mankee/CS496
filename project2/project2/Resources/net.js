@@ -1,5 +1,5 @@
 exports.sendWhenPossible = function(database) {
-	sendEverything(database);
+	// sendEverything(database);
 };
 
 function sendEverything(database) {
@@ -14,13 +14,13 @@ function sendEverything(database) {
 	// }, 5000);
 }
 
-function sendToServer(photoObj, database) {
+exports.sendToServer = function (photoObj, database) {
 	function onSuccess() {
 		database.flagEntry(photoObj.id);
 	}
 	
 	function onFail() {
-		alert("no response from server");
+		// alert("no response from server");
 	}
 	
 	var httpClient = Ti.Network.createHTTPClient({
@@ -43,13 +43,16 @@ function sendToServer(photoObj, database) {
 		timeout : 5000
 	});
 	
-	httpClient.open("POST", "http://localhost:8888/project2_servlet");
+ 	httpClient.setRequestHeader('Content-Type', 'multipart/form-data');
+	httpClient.setRequestHeader('Content-Type', 'image/png');
+	httpClient.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	httpClient.open("POST", "http://localhost:8888/upload");
 	httpClient.send({
 		image : photoObj.image,
 		imagePath : photoObj.imagePath,
 		latitude : photoObj.latitude,
-		longitude : photoObj.longitude,
-		dateSaved : photoObj.dateSaved.getTime()
+		longitude : photoObj.longitude
+		// dateSaved : photoObj.dateSaved.getTime()
 	});
 	
-}
+};
