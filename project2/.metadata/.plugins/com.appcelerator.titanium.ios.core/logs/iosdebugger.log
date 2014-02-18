@@ -1,50 +1,175 @@
-Logger started at: Monday, February 17, 2014 12:22:40 AM PST
+Logger started at: Monday, February 17, 2014 6:44:04 PM PST
 Component: com.appcelerator.titanium.ios.core
 Version: 1.0.0.1388991145
-[22:40.313] Sent: >21*1392625360313*version<
-[22:40.313] Recv: >1392625360313*2*3.2.1.GA<
-[22:40.314] Sent: >45*1392625360314*option*stepFiltersEnabled*false<
-[22:40.315] Recv: >1392625360314<
-[22:40.315] Sent: >36*1392625360315*option*monitorXHR*true<
-[22:40.315] Recv: >1392625360315<
-[22:40.315] Sent: >45*1392625360316*option*suspendOnFirstLine*false<
-[22:40.315] Recv: >1392625360316<
-[22:40.316] Sent: >46*1392625360317*option*suspendOnExceptions*false<
-[22:40.316] Recv: >1392625360317<
-[22:40.316] Sent: >41*1392625360318*option*suspendOnErrors*true<
-[22:40.316] Recv: >1392625360318<
-[22:40.316] Sent: >43*1392625360319*option*suspendOnKeywords*true<
-[22:40.317] Recv: >1392625360319<
-[22:40.317] Sent: >45*1392625360320*option*bypassConstructors*false<
-[22:40.317] Recv: >1392625360320<
-[22:40.317] Sent: >45*1392625360321*option*stepFiltersEnabled*false<
-[22:40.317] Recv: >1392625360321<
-[22:40.317] Sent: >30*1392625360322*detailFormatters<
-[22:40.318] Recv: >1392625360322<
-[22:40.318] Sent: >64*1392625360323*breakpoint*create*app:/userInterface.js*295*1*0**1<
-[22:40.318] Recv: >1392625360323*created<
-[22:40.319] Sent: >64*1392625360324*breakpoint*create*app:/userInterface.js*289*0*0**1<
-[22:40.319] Recv: >1392625360324*created<
-[22:40.319] Sent: >64*1392625360325*breakpoint*create*app:/userInterface.js*288*0*0**1<
-[22:40.319] Recv: >1392625360325*created<
-[22:40.319] Sent: >20*1392625360326*enable<
-[22:40.320] Recv: >1392625360326<
-[22:40.321] Recv: >threads*created*0*kroll$1<
-[22:40.322] Recv: >log*out*[DEBUG] Analytics is enabled = YES<
-[22:40.323] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/app.js, Resource: app_js<
-[22:40.323] Recv: >scripts*created*334482112|app:/app.js||1|29<
-[22:40.324] Recv: >resumed*0*started<
-[22:40.324] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/database.js, Resource: database_js<
-[22:40.325] Recv: >scripts*created*334481888|app:/database.js||1|57<
-[22:40.325] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/ti.map.js, Resource: ti_map_js<
-[22:40.325] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/userInterface.js, Resource: userInterface_js<
-[22:40.326] Recv: >scripts*created*334481824|app:/userInterface.js||1|299<
-[22:40.326] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/net.js, Resource: net_js<
-[22:40.327] Recv: >scripts*created*334481408|app:/net.js||1|62<
-[22:40.327] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/camera.js, Resource: camera_js<
-[22:40.327] Recv: >scripts*created*334481472|app:/camera.js||1|34<
-[22:40.327] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/photoGallery.js, Resource: photoGallery_js<
-[22:40.328] Recv: >scripts*created*334482880|app:/photoGallery.js||1|66<
-[22:40.330] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/E4F02C90-773A-484D-B517-9BC647904A31/project2.app/_app_props_.json, Resource: _app_props__json<
-[22:40.657] Recv: >log*out*[DEBUG] Application booted in 437.349021 ms<
+[44:4.139] Sent: >21*1392691444140*version<
+[44:4.140] Recv: >1392691444140*2*3.2.1.GA<
+[44:4.141] Sent: >45*1392691444141*option*stepFiltersEnabled*false<
+[44:4.141] Recv: >1392691444141<
+[44:4.141] Sent: >36*1392691444142*option*monitorXHR*true<
+[44:4.142] Recv: >1392691444142<
+[44:4.142] Sent: >45*1392691444143*option*suspendOnFirstLine*false<
+[44:4.142] Recv: >1392691444143<
+[44:4.142] Sent: >46*1392691444144*option*suspendOnExceptions*false<
+[44:4.143] Recv: >1392691444144<
+[44:4.143] Sent: >41*1392691444145*option*suspendOnErrors*true<
+[44:4.143] Recv: >1392691444145<
+[44:4.143] Sent: >43*1392691444146*option*suspendOnKeywords*true<
+[44:4.144] Recv: >1392691444146<
+[44:4.144] Sent: >45*1392691444147*option*bypassConstructors*false<
+[44:4.144] Recv: >1392691444147<
+[44:4.144] Sent: >45*1392691444148*option*stepFiltersEnabled*false<
+[44:4.145] Recv: >1392691444148<
+[44:4.145] Sent: >30*1392691444149*detailFormatters<
+[44:4.145] Recv: >1392691444149<
+[44:4.146] Sent: >64*1392691444150*breakpoint*create*app:/userInterface.js*266*0*0**1<
+[44:4.146] Recv: >1392691444150*created<
+[44:4.146] Sent: >64*1392691444151*breakpoint*create*app:/userInterface.js*265*0*0**1<
+[44:4.146] Recv: >1392691444151*created<
+[44:4.147] Sent: >64*1392691444152*breakpoint*create*app:/userInterface.js*206*1*0**1<
+[44:4.147] Recv: >1392691444152*created<
+[44:4.147] Sent: >64*1392691444153*breakpoint*create*app:/userInterface.js*272*1*0**1<
+[44:4.148] Recv: >1392691444153*created<
+[44:4.149] Sent: >62*1392691444154*breakpoint*create*app:/photoGallery.js*40*1*0**1<
+[44:4.149] Recv: >1392691444154*created<
+[44:4.149] Sent: >63*1392691444155*breakpoint*create*app:/userInterface.js*92*1*0**1<
+[44:4.149] Recv: >1392691444155*created<
+[44:4.150] Sent: >64*1392691444156*breakpoint*create*app:/userInterface.js*108*1*0**1<
+[44:4.150] Recv: >1392691444156*created<
+[44:4.150] Sent: >20*1392691444157*enable<
+[44:4.150] Recv: >1392691444157<
+[44:4.152] Recv: >threads*created*0*kroll$1<
+[44:4.153] Recv: >log*out*[DEBUG] Analytics is enabled = YES<
+[44:4.153] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/30580F32-B80C-498C-8883-FF85D2CE69BB/project2.app/app.js, Resource: app_js<
+[44:4.154] Recv: >scripts*created*332241536|app:/app.js||1|18<
+[44:4.154] Recv: >resumed*0*started<
+[44:4.154] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/30580F32-B80C-498C-8883-FF85D2CE69BB/project2.app/database.js, Resource: database_js<
+[44:4.154] Recv: >scripts*created*332241472|app:/database.js||1|45<
+[44:4.155] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/30580F32-B80C-498C-8883-FF85D2CE69BB/project2.app/ti.map.js, Resource: ti_map_js<
+[44:4.155] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/30580F32-B80C-498C-8883-FF85D2CE69BB/project2.app/userInterface.js, Resource: userInterface_js<
+[44:4.156] Recv: >scripts*created*332241408|app:/userInterface.js||1|215<
+[44:4.156] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/30580F32-B80C-498C-8883-FF85D2CE69BB/project2.app/net.js, Resource: net_js<
+[44:4.156] Recv: >scripts*created*332241152|app:/net.js||1|41<
+[44:4.156] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/30580F32-B80C-498C-8883-FF85D2CE69BB/project2.app/camera.js, Resource: camera_js<
+[44:4.157] Recv: >scripts*created*332241024|app:/camera.js||1|34<
+[44:4.157] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/30580F32-B80C-498C-8883-FF85D2CE69BB/project2.app/photoGallery.js, Resource: photoGallery_js<
+[44:4.157] Recv: >scripts*created*332242688|app:/photoGallery.js||1|68<
+[44:4.159] Recv: >log*out*[DEBUG] Loading: /Users/austin.dubina/Library/Application Support/iPhone Simulator/7.0.3/Applications/30580F32-B80C-498C-8883-FF85D2CE69BB/project2.app/_app_props_.json, Resource: _app_props__json<
+[44:4.392] Recv: >suspended*0*breakpoint*app:/userInterface.js*92<
+[44:4.393] Sent: >22*1392691444158*frames*0<
+[44:4.393] Recv: >1392691444158*0||entries,imageBlob|app:/userInterface.js|92|false|0|0*1|||app:/app.js|8|false|0|0<
+[44:4.895] Sent: >34*1392691444159*variables*0*frame[0]<
+[44:4.896] Recv: >1392691444159*this|object|no|[object TiUIWindow]*item|undefined|wl|undefined*rows|object|wnol|[object Array]*entries|object|wnol|[object Array]*arguments|object|opnl|[object Arguments]*imageBlob|undefined|wl|undefined*i|undefined|wl|undefined*photoButton|object|nol|[object TiUIButton]*navView|object|nol|[object TiUIView]*mapview|object|nol|[object TiMapIOS7View]*window|object|nol|[object TiUIWindow]*galleryButton|object|nol|[object TiUIButton]*__OXP|object|ol|[object Object]*TiMap|object|nol|[object ti.map]*module|object|ol|[object Object]*exports|object|ol|[object Object]*database|object|nov|[object database]*camera|object|ov|[object Object]*photoGallery|object|ov|[object Object]*mainWindow|object|nov|[object TiUIWindow]*net|object|ov|[object Object]*userInterface|object|ov|[object Object]*console|object|nov|[object TiConsole]<
+[44:5.340] Sent: >39*1392691444160*variables*0*frame[0].rows<
+[44:5.341] Recv: >1392691444160<
+[44:5.341] Sent: >42*1392691444161*variables*0*frame[0].mapview<
+[44:5.342] Recv: >1392691444161*userLocation|boolean|wvl|1*regionFit|boolean|wvl|1*mapType|number|wvl|0*horizontalWrap|boolean|wvl|1*region|object|ovl|[object Object]*height|string|wvl|"100%"*animate|object|novl|[object TiMapIOS7View]<
+[44:5.342] Sent: >41*1392691444162*variables*0*frame[0].window<
+[44:5.344] Recv: >1392691444162*horizontalWrap|boolean|wvl|1*translucent|null|wvl|<null>*backgroundColor|string|wvl|"#0FFFFFF"*title|string|wvl|"Project2"*navTintColor|null|wvl|<null>*tabBarHidden|boolean|wvl|0*barImage|null|wvl|<null>*titleAttributes|null|wvl|<null>*navBarHidden|boolean|wvl|1*refresh|object|vl|[object Function]*layout|string|wvl|"vertical"*orientationModes|null|wvl|<null>*barColor|null|wvl|<null><
+[44:5.448] Sent: >47*1392691444163*details*0*frame[0].window.refresh<
+[44:5.448] Recv: >1392691444163*0|undefined|wvl|undefined*1|undefined|wvl|undefined<
+[44:5.454] Sent: >47*1392691444164*details*0*frame[0].window.refresh<
+[44:5.454] Recv: >1392691444164*0|undefined|wvl|undefined*1|undefined|wvl|undefined<
+[44:8.402] Sent: >9**resume*0<
+[44:8.404] Recv: >resumed*0*resume<
+[44:8.404] Recv: >suspended*0*breakpoint*app:/userInterface.js*92<
+[44:8.404] Sent: >22*1392691444165*frames*0<
+[44:8.405] Recv: >1392691444165*0||entries,imageBlob|app:/userInterface.js|92|false|0|0*1|||app:/app.js|8|false|0|0<
+[44:8.665] Sent: >34*1392691444166*variables*0*frame[0]<
+[44:8.666] Recv: >1392691444166*this|object|no|[object TiUIWindow]*item|object|nol|[object TiMapAnnotation]*rows|object|wnol|[object Array]*entries|object|wnol|[object Array]*arguments|object|opnl|[object Arguments]*imageBlob|undefined|wl|undefined*i|number|wl|0*photoButton|object|nol|[object TiUIButton]*navView|object|nol|[object TiUIView]*mapview|object|nol|[object TiMapIOS7View]*window|object|nol|[object TiUIWindow]*galleryButton|object|nol|[object TiUIButton]*__OXP|object|ol|[object Object]*TiMap|object|nol|[object ti.map]*module|object|ol|[object Object]*exports|object|ol|[object Object]*database|object|nov|[object database]*camera|object|ov|[object Object]*photoGallery|object|ov|[object Object]*mainWindow|object|nov|[object TiUIWindow]*net|object|ov|[object Object]*userInterface|object|ov|[object Object]*console|object|nov|[object TiConsole]<
+[44:9.124] Sent: >39*1392691444167*variables*0*frame[0].rows<
+[44:9.125] Recv: >1392691444167*0|object|novl|[object TiMapAnnotation]<
+[44:9.125] Sent: >42*1392691444168*variables*0*frame[0].mapview<
+[44:9.126] Recv: >1392691444168*userLocation|boolean|wvl|1*regionFit|boolean|wvl|1*mapType|number|wvl|0*horizontalWrap|boolean|wvl|1*region|object|ovl|[object Object]*height|string|wvl|"100%"*animate|object|novl|[object TiMapIOS7View]<
+[44:9.131] Sent: >41*1392691444169*variables*0*frame[0].window<
+[44:9.132] Recv: >1392691444169*horizontalWrap|boolean|wvl|1*translucent|null|wvl|<null>*backgroundColor|string|wvl|"#0FFFFFF"*title|string|wvl|"Project2"*navTintColor|null|wvl|<null>*tabBarHidden|boolean|wvl|0*barImage|null|wvl|<null>*titleAttributes|null|wvl|<null>*navBarHidden|boolean|wvl|1*refresh|object|vl|[object Function]*layout|string|wvl|"vertical"*orientationModes|null|wvl|<null>*barColor|null|wvl|<null><
+[44:9.287] Sent: >47*1392691444170*details*0*frame[0].window.refresh<
+[44:9.287] Recv: >1392691444170*0|undefined|wvl|undefined*1|undefined|wvl|undefined<
+[44:9.327] Sent: >47*1392691444171*details*0*frame[0].window.refresh<
+[44:9.327] Recv: >1392691444171*0|undefined|wvl|undefined*1|undefined|wvl|undefined<
+[44:10.118] Sent: >9**resume*0<
+[44:10.119] Recv: >resumed*0*resume<
+[44:10.119] Recv: >suspended*0*breakpoint*app:/userInterface.js*92<
+[44:10.119] Sent: >22*1392691444172*frames*0<
+[44:10.120] Recv: >1392691444172*0||entries,imageBlob|app:/userInterface.js|92|false|0|0*1|||app:/app.js|8|false|0|0<
+[44:10.377] Sent: >34*1392691444173*variables*0*frame[0]<
+[44:10.378] Recv: >1392691444173*this|object|no|[object TiUIWindow]*item|object|nol|[object TiMapAnnotation]*rows|object|wnol|[object Array]*entries|object|wnol|[object Array]*arguments|object|opnl|[object Arguments]*imageBlob|undefined|wl|undefined*i|number|wl|1*photoButton|object|nol|[object TiUIButton]*navView|object|nol|[object TiUIView]*mapview|object|nol|[object TiMapIOS7View]*window|object|nol|[object TiUIWindow]*galleryButton|object|nol|[object TiUIButton]*__OXP|object|ol|[object Object]*TiMap|object|nol|[object ti.map]*module|object|ol|[object Object]*exports|object|ol|[object Object]*database|object|nov|[object database]*camera|object|ov|[object Object]*photoGallery|object|ov|[object Object]*mainWindow|object|nov|[object TiUIWindow]*net|object|ov|[object Object]*userInterface|object|ov|[object Object]*console|object|nov|[object TiConsole]<
+[44:10.839] Sent: >39*1392691444174*variables*0*frame[0].rows<
+[44:10.840] Recv: >1392691444174*0|object|novl|[object TiMapAnnotation]*1|object|novl|[object TiMapAnnotation]<
+[44:10.840] Sent: >42*1392691444175*variables*0*frame[0].mapview<
+[44:10.840] Recv: >1392691444175*userLocation|boolean|wvl|1*regionFit|boolean|wvl|1*mapType|number|wvl|0*horizontalWrap|boolean|wvl|1*region|object|ovl|[object Object]*height|string|wvl|"100%"*animate|object|novl|[object TiMapIOS7View]<
+[44:10.867] Sent: >41*1392691444176*variables*0*frame[0].window<
+[44:10.868] Recv: >1392691444176*horizontalWrap|boolean|wvl|1*translucent|null|wvl|<null>*backgroundColor|string|wvl|"#0FFFFFF"*title|string|wvl|"Project2"*navTintColor|null|wvl|<null>*tabBarHidden|boolean|wvl|0*barImage|null|wvl|<null>*titleAttributes|null|wvl|<null>*navBarHidden|boolean|wvl|1*refresh|object|vl|[object Function]*layout|string|wvl|"vertical"*orientationModes|null|wvl|<null>*barColor|null|wvl|<null><
+[44:11.82] Sent: >47*1392691444177*details*0*frame[0].window.refresh<
+[44:11.83] Recv: >1392691444177*0|undefined|wvl|undefined*1|undefined|wvl|undefined<
+[44:11.135] Sent: >9**resume*0<
+[44:11.135] Recv: >resumed*0*resume<
+[44:11.136] Recv: >suspended*0*breakpoint*app:/userInterface.js*92<
+[44:11.136] Sent: >22*1392691444178*frames*0<
+[44:11.136] Recv: >1392691444178*0||entries,imageBlob|app:/userInterface.js|92|false|0|0*1|||app:/app.js|8|false|0|0<
+[44:11.379] Sent: >34*1392691444179*variables*0*frame[0]<
+[44:11.380] Recv: >1392691444179*this|object|no|[object TiUIWindow]*item|object|nol|[object TiMapAnnotation]*rows|object|wnol|[object Array]*entries|object|wnol|[object Array]*arguments|object|opnl|[object Arguments]*imageBlob|undefined|wl|undefined*i|number|wl|2*photoButton|object|nol|[object TiUIButton]*navView|object|nol|[object TiUIView]*mapview|object|nol|[object TiMapIOS7View]*window|object|nol|[object TiUIWindow]*galleryButton|object|nol|[object TiUIButton]*__OXP|object|ol|[object Object]*TiMap|object|nol|[object ti.map]*module|object|ol|[object Object]*exports|object|ol|[object Object]*database|object|nov|[object database]*camera|object|ov|[object Object]*photoGallery|object|ov|[object Object]*mainWindow|object|nov|[object TiUIWindow]*net|object|ov|[object Object]*userInterface|object|ov|[object Object]*console|object|nov|[object TiConsole]<
+[44:11.823] Sent: >39*1392691444180*variables*0*frame[0].rows<
+[44:11.824] Recv: >1392691444180*0|object|novl|[object TiMapAnnotation]*1|object|novl|[object TiMapAnnotation]*2|object|novl|[object TiMapAnnotation]<
+[44:11.824] Sent: >42*1392691444181*variables*0*frame[0].mapview<
+[44:11.825] Recv: >1392691444181*userLocation|boolean|wvl|1*regionFit|boolean|wvl|1*mapType|number|wvl|0*horizontalWrap|boolean|wvl|1*region|object|ovl|[object Object]*height|string|wvl|"100%"*animate|object|novl|[object TiMapIOS7View]<
+[44:11.832] Sent: >41*1392691444182*variables*0*frame[0].window<
+[44:11.833] Recv: >1392691444182*horizontalWrap|boolean|wvl|1*translucent|null|wvl|<null>*backgroundColor|string|wvl|"#0FFFFFF"*title|string|wvl|"Project2"*navTintColor|null|wvl|<null>*tabBarHidden|boolean|wvl|0*barImage|null|wvl|<null>*titleAttributes|null|wvl|<null>*navBarHidden|boolean|wvl|1*refresh|object|vl|[object Function]*layout|string|wvl|"vertical"*orientationModes|null|wvl|<null>*barColor|null|wvl|<null><
+[44:12.4] Sent: >47*1392691444183*details*0*frame[0].window.refresh<
+[44:12.4] Recv: >1392691444183*0|undefined|wvl|undefined*1|undefined|wvl|undefined<
+[44:12.44] Sent: >47*1392691444184*details*0*frame[0].window.refresh<
+[44:12.45] Recv: >1392691444184*0|undefined|wvl|undefined*1|undefined|wvl|undefined<
+[44:19.429] Sent: >9**resume*0<
+[44:19.430] Recv: >resumed*0*resume<
+[44:19.430] Recv: >suspended*0*breakpoint*app:/userInterface.js*92<
+[44:19.431] Sent: >22*1392691444185*frames*0<
+[44:19.432] Recv: >1392691444185*0||entries,imageBlob|app:/userInterface.js|92|false|0|0*1|||app:/app.js|8|false|0|0<
+[44:19.776] Sent: >34*1392691444186*variables*0*frame[0]<
+[44:19.777] Recv: >1392691444186*this|object|no|[object TiUIWindow]*item|object|nol|[object TiMapAnnotation]*rows|object|wnol|[object Array]*entries|object|wnol|[object Array]*arguments|object|opnl|[object Arguments]*imageBlob|undefined|wl|undefined*i|number|wl|3*photoButton|object|nol|[object TiUIButton]*navView|object|nol|[object TiUIView]*mapview|object|nol|[object TiMapIOS7View]*window|object|nol|[object TiUIWindow]*galleryButton|object|nol|[object TiUIButton]*__OXP|object|ol|[object Object]*TiMap|object|nol|[object ti.map]*module|object|ol|[object Object]*exports|object|ol|[object Object]*database|object|nov|[object database]*camera|object|ov|[object Object]*photoGallery|object|ov|[object Object]*mainWindow|object|nov|[object TiUIWindow]*net|object|ov|[object Object]*userInterface|object|ov|[object Object]*console|object|nov|[object TiConsole]<
+[44:20.309] Sent: >39*1392691444187*variables*0*frame[0].rows<
+[44:20.309] Recv: >1392691444187*0|object|novl|[object TiMapAnnotation]*1|object|novl|[object TiMapAnnotation]*2|object|novl|[object TiMapAnnotation]*3|object|novl|[object TiMapAnnotation]<
+[44:20.310] Sent: >42*1392691444188*variables*0*frame[0].mapview<
+[44:20.310] Recv: >1392691444188*userLocation|boolean|wvl|1*regionFit|boolean|wvl|1*mapType|number|wvl|0*horizontalWrap|boolean|wvl|1*region|object|ovl|[object Object]*height|string|wvl|"100%"*animate|object|novl|[object TiMapIOS7View]<
+[44:20.318] Sent: >41*1392691444189*variables*0*frame[0].window<
+[44:20.319] Recv: >1392691444189*horizontalWrap|boolean|wvl|1*translucent|null|wvl|<null>*backgroundColor|string|wvl|"#0FFFFFF"*title|string|wvl|"Project2"*navTintColor|null|wvl|<null>*tabBarHidden|boolean|wvl|0*barImage|null|wvl|<null>*titleAttributes|null|wvl|<null>*navBarHidden|boolean|wvl|1*refresh|object|vl|[object Function]*layout|string|wvl|"vertical"*orientationModes|null|wvl|<null>*barColor|null|wvl|<null><
+[44:20.500] Sent: >47*1392691444190*details*0*frame[0].window.refresh<
+[44:20.501] Recv: >1392691444190*0|undefined|wvl|undefined*1|undefined|wvl|undefined<
+[44:20.542] Sent: >47*1392691444191*details*0*frame[0].window.refresh<
+[44:20.543] Recv: >1392691444191*0|undefined|wvl|undefined*1|undefined|wvl|undefined<
+[44:20.567] Sent: >9**resume*0<
+[44:20.568] Recv: >resumed*0*resume<
+[44:20.568] Recv: >suspended*0*breakpoint*app:/userInterface.js*92<
+[44:20.568] Sent: >22*1392691444192*frames*0<
+[44:20.569] Recv: >1392691444192*0||entries,imageBlob|app:/userInterface.js|92|false|0|0*1|||app:/app.js|8|false|0|0<
+[44:20.828] Sent: >34*1392691444193*variables*0*frame[0]<
+[44:20.829] Recv: >1392691444193*this|object|no|[object TiUIWindow]*item|object|nol|[object TiMapAnnotation]*rows|object|wnol|[object Array]*entries|object|wnol|[object Array]*arguments|object|opnl|[object Arguments]*imageBlob|undefined|wl|undefined*i|number|wl|4*photoButton|object|nol|[object TiUIButton]*navView|object|nol|[object TiUIView]*mapview|object|nol|[object TiMapIOS7View]*window|object|nol|[object TiUIWindow]*galleryButton|object|nol|[object TiUIButton]*__OXP|object|ol|[object Object]*TiMap|object|nol|[object ti.map]*module|object|ol|[object Object]*exports|object|ol|[object Object]*database|object|nov|[object database]*camera|object|ov|[object Object]*photoGallery|object|ov|[object Object]*mainWindow|object|nov|[object TiUIWindow]*net|object|ov|[object Object]*userInterface|object|ov|[object Object]*console|object|nov|[object TiConsole]<
+[44:21.259] Sent: >39*1392691444194*variables*0*frame[0].rows<
+[44:21.259] Recv: >1392691444194*0|object|novl|[object TiMapAnnotation]*1|object|novl|[object TiMapAnnotation]*2|object|novl|[object TiMapAnnotation]*3|object|novl|[object TiMapAnnotation]*4|object|novl|[object TiMapAnnotation]<
+[44:21.260] Sent: >42*1392691444195*variables*0*frame[0].mapview<
+[44:21.260] Recv: >1392691444195*userLocation|boolean|wvl|1*regionFit|boolean|wvl|1*mapType|number|wvl|0*horizontalWrap|boolean|wvl|1*region|object|ovl|[object Object]*height|string|wvl|"100%"*animate|object|novl|[object TiMapIOS7View]<
+[44:21.268] Sent: >41*1392691444196*variables*0*frame[0].window<
+[44:21.269] Recv: >1392691444196*horizontalWrap|boolean|wvl|1*translucent|null|wvl|<null>*backgroundColor|string|wvl|"#0FFFFFF"*title|string|wvl|"Project2"*navTintColor|null|wvl|<null>*tabBarHidden|boolean|wvl|0*barImage|null|wvl|<null>*titleAttributes|null|wvl|<null>*navBarHidden|boolean|wvl|1*refresh|object|vl|[object Function]*layout|string|wvl|"vertical"*orientationModes|null|wvl|<null>*barColor|null|wvl|<null><
+[44:21.513] Sent: >47*1392691444197*details*0*frame[0].window.refresh<
+[44:21.514] Recv: >1392691444197*0|undefined|wvl|undefined*1|undefined|wvl|undefined<
+[44:21.557] Sent: >47*1392691444198*details*0*frame[0].window.refresh<
+[44:21.557] Recv: >1392691444198*0|undefined|wvl|undefined*1|undefined|wvl|undefined<
+[44:21.603] Sent: >9**resume*0<
+[44:21.603] Recv: >resumed*0*resume<
+[44:21.604] Recv: >suspended*0*breakpoint*app:/userInterface.js*108<
+[44:21.604] Sent: >22*1392691444199*frames*0<
+[44:21.604] Recv: >1392691444199*0||entries,imageBlob|app:/userInterface.js|108|false|0|0*1|||app:/app.js|8|false|0|0<
+[44:21.944] Sent: >34*1392691444200*variables*0*frame[0]<
+[44:21.946] Recv: >1392691444200*this|object|no|[object TiUIWindow]*item|object|nol|[object TiMapAnnotation]*rows|object|wnol|[object Array]*entries|object|wnol|[object Array]*arguments|object|opnl|[object Arguments]*imageBlob|undefined|wl|undefined*i|number|wl|5*photoButton|object|nol|[object TiUIButton]*navView|object|nol|[object TiUIView]*mapview|object|nol|[object TiMapIOS7View]*window|object|nol|[object TiUIWindow]*galleryButton|object|nol|[object TiUIButton]*__OXP|object|ol|[object Object]*TiMap|object|nol|[object ti.map]*module|object|ol|[object Object]*exports|object|ol|[object Object]*database|object|nov|[object database]*camera|object|ov|[object Object]*photoGallery|object|ov|[object Object]*mainWindow|object|nov|[object TiUIWindow]*net|object|ov|[object Object]*userInterface|object|ov|[object Object]*console|object|nov|[object TiConsole]<
+[44:22.459] Sent: >39*1392691444201*variables*0*frame[0].rows<
+[44:22.460] Recv: >1392691444201*0|object|novl|[object TiMapAnnotation]*1|object|novl|[object TiMapAnnotation]*2|object|novl|[object TiMapAnnotation]*3|object|novl|[object TiMapAnnotation]*4|object|novl|[object TiMapAnnotation]<
+[44:22.460] Sent: >42*1392691444202*variables*0*frame[0].mapview<
+[44:22.461] Recv: >1392691444202*userLocation|boolean|wvl|1*regionFit|boolean|wvl|1*mapType|number|wvl|0*horizontalWrap|boolean|wvl|1*region|object|ovl|[object Object]*height|string|wvl|"100%"*animate|object|novl|[object TiMapIOS7View]<
+[44:22.469] Sent: >41*1392691444203*variables*0*frame[0].window<
+[44:22.469] Recv: >1392691444203*horizontalWrap|boolean|wvl|1*translucent|null|wvl|<null>*backgroundColor|string|wvl|"#0FFFFFF"*title|string|wvl|"Project2"*navTintColor|null|wvl|<null>*tabBarHidden|boolean|wvl|0*barImage|null|wvl|<null>*titleAttributes|null|wvl|<null>*navBarHidden|boolean|wvl|1*refresh|object|vl|[object Function]*layout|string|wvl|"vertical"*orientationModes|null|wvl|<null>*barColor|null|wvl|<null><
+[44:22.700] Sent: >47*1392691444204*details*0*frame[0].window.refresh<
+[44:22.700] Recv: >1392691444204*0|undefined|wvl|undefined*1|undefined|wvl|undefined<
+[44:22.762] Sent: >47*1392691444205*details*0*frame[0].window.refresh<
+[44:22.763] Recv: >1392691444205*0|undefined|wvl|undefined*1|undefined|wvl|undefined<
+[44:28.682] Sent: >9**resume*0<
+[44:28.682] Recv: >resumed*0*resume<
+[44:28.728] Recv: >log*out*[DEBUG] Application booted in 24693.395019 ms<
 ----------End of file----------

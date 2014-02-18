@@ -6,9 +6,13 @@ import java.io.PrintWriter;
 import java.util.Date;
 
 import javax.jdo.PersistenceManager;
-import javax.servlet.http.*;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.fileupload.*;
+import org.apache.commons.fileupload.FileItemIterator;
+import org.apache.commons.fileupload.FileItemStream;
+import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.io.IOUtils;
 
@@ -20,44 +24,53 @@ public class Project2_servletServlet extends HttpServlet {
 	
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
-			handle(req, resp);
+			try {
+				handle(req, resp);
+			} catch (FileUploadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	}
 	
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
 		throws IOException {
-			handle(req, resp);
+			try {
+				handle(req, resp);
+			} catch (FileUploadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		
 	}
 	
 	private void handle(HttpServletRequest req, HttpServletResponse resp)
-			throws IOException {
+			throws IOException, FileUploadException {
 		// Get the image representation
-		try {
+	
 			ServletFileUpload upload = new ServletFileUpload();
 			FileItemIterator iter = upload.getItemIterator(req);
 			 // construct our entry objects
-		    while (iter.hasNext()) {
+			while (iter.hasNext()) {
 	            FileItemStream item = iter.next();
 	            InputStream itemStream = item.openStream();
-		       
-		        String fieldName = item.getFieldName();
-		        switch(fieldName) {
+	            String fieldName = item.getFieldName();
+	            if (item.isFormField()) {
+	            	switch(fieldName) {
 		        	case "latitude" : entryObj.setLatitude(IOUtils.toString(itemStream));
 		        		break;
 		        	case "longitude" : entryObj.setLongitude(IOUtils.toString(itemStream));
 	        			break;
 		        	case "imagePath" : entryObj.setImagePath(IOUtils.toString(itemStream));
 	        			break;
-		        	case "image" : entryObj.setImage(new Blob(IOUtils.toByteArray(itemStream)));	        		
-	        			break;
-		        	case "dateSaved" : entryObj.setDateSaved(dateSaved(IOUtils.toString(itemStream)));
+		        	case "dateSaved" : entryObj.setDateSaved(dateSaved(itemStream.toString()));
         				break;
-		        }
+	            	}
+	            } else {
+	            	entryObj.setImage(new Blob(IOUtils.toByteArray(itemStream)));
+	            }
 		    }
 		
-		} catch (Exception e) {
-			throw new IOException();
-		}	
+	
 	
 		PersistenceManager pm = PMF.getPMF().getPersistenceManager();
 		String response = "fail";

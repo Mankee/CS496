@@ -1,23 +1,4 @@
-exports.sendWhenPossible = function(database) {
-	sendEverything(database);
-};
-
-function sendEverything(database) {
-	if (Titanium.Network.networkType != Titanium.Network.NETWORK_NONE) {
-		var entries = database.listEntries(true);
-		for (var i = 0; i < entries.length; i++) {
-			if (entries[i].latitude && entries[i].longitude && entries[i].latitude.length() > 0  && entries[i].longitude.length() > 0) {
-				sendToServer(entries[i], database);
-			}
-		}
-	}
-	
-	setTimeout(function(){
-		sendEverything(database);
-	}, 5000);
-}
-
-function sendToServer (photoObj, database) {
+exports.sendToServer = function(photoObj, database, imageBlob) {
 	function onSuccess() {
 		database.flagEntry(photoObj.id);
 	}
@@ -46,16 +27,14 @@ function sendToServer (photoObj, database) {
 		timeout : 5000
 	});
 	
- 	httpClient.setRequestHeader('Content-Type', 'multipart/form-data');
-	httpClient.setRequestHeader('Content-Type', 'image/png');
-	httpClient.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 	httpClient.open("POST", "http://localhost:8888/upload");
 	httpClient.send({
-		image : photoObj.image,
 		imagePath : photoObj.imagePath,
 		latitude : photoObj.latitude,
 		longitude : photoObj.longitude,
-		dateSaved : photoObj.dateSaved
+		dateSaved : photoObj.dateSaved,
+		imagePath : photoObj.imagePath,
+		image : imageBlob
 	});
 	
 };

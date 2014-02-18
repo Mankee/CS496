@@ -1,0 +1,45 @@
+var TiMap = require('ti.map');
+
+function openDatabase() {
+	var database = Ti.Database.open('Database3');
+	database.execute('CREATE TABLE IF NOT EXISTS gallery (id INTEGER PRIMARY KEY, imagepath TEXT, latitude TEXT, longitude TEXT, uploaded INT DEFAULT 0, dateSaved DATETIME DEFAULT CURRENT_TIMESTAMP)');
+	return database;
+}
+
+exports.listEntries = function(showOnlyUnflagged) {
+	var entries = [];
+	
+	var database = openDatabase();
+	var rs = showOnlyUnflagged ? database.execute('SELECT * from gallery where uploaded = 0 order by dateSaved') : database.execute('SELECT * from gallery order by dateSaved');
+	
+	while (rs.isValidRow()) {
+		var entry = {
+		    latitude:rs.fieldByName('latitude'),
+		    longitude: rs.fieldByName('longitude'),
+		    imagePath: rs.fieldByName('imagepath'),
+		    dateSaved: rs.fieldByName('dateSaved'),
+		    image : imageBlob,
+		    id: rs.fieldByName('id'),
+		    uploaded: rs.fieldByName('uploaded')
+		};
+			
+		entries.push(entry);
+		rs.next();
+	}
+	database.close();
+	return entries;
+};
+
+exports.saveEntry = function(obj) {
+	var database = openDatabase();
+	database.execute('INSERT INTO gallery(latitude, longitude, imagepath, dateSaved) VALUES (?, ?, ?, ?) ', obj.latitude, obj.longitude, obj.imagePath, obj.dateSaved);
+	database.close();
+};
+
+exports.flagEntry = function(photoID) {
+	var database = openDatabase();
+	database.execute('UPDATE gallery SET uploaded=1 WHERE id=?', photoID);
+	database.close();
+};
+
+

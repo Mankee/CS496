@@ -24,13 +24,7 @@ exports.createMainWindow = function() {
 		top : 20
 	}));
 	
-	var createButton = Ti.UI.createButton({
-		title : "  Entry  ",
-		textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
-		font: { fontSize:28 },
-		top : 20
-	});
-	navView.add(createButton);
+
 	
 	var photoButton = Ti.UI.createButton({
 		title : "  Take Photo  ",
@@ -41,7 +35,7 @@ exports.createMainWindow = function() {
 	navView.add(photoButton);
 	
 	var galleryButton = Ti.UI.createButton({
-		title : "Upload Photo",
+		title : "  Upload Photo  ",
 		textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
 		font: { fontSize:28 },
 		top : 20
@@ -50,18 +44,14 @@ exports.createMainWindow = function() {
 	
 	window.add(navView);
 	
-	
-	
-	var test = database.listEntries();
-
 	var mapview = TiMap.createView({
 	    mapType: TiMap.NORMAL_TYPE,
 	    region: {latitude:44.56734, longitude:-123.27853,
 	             latitudeDelta:0.01, longitudeDelta:0.01},
-	    // animate:true,
+	    animate:true,
 	    regionFit:true,
-	    // userLocation:true,
-	    annotations:test,
+	    userLocation:true,
+	    annotations:database.listEntries(),
 	    height : "100%"
 	});
 
@@ -82,18 +72,11 @@ exports.createMainWindow = function() {
 	if (Ti.Platform.name == 'iPhone OS') {
 	    mapview.addEventListener('complete', function(evt){
 	        mapview.region = {
-	            latitude:37.390749, longitude:-122.081651,
-	            latitudeDelta:0.01, longitudeDelta:0.01
+	            latitude:44.56734, longitude:-123.27853,
+	            latitudeDelta:0.1, longitudeDelta:0.1
 	        };
 	    });
 	}
-	
-	var tableView = Ti.UI.createTableView({
-		data : [],
-		backgroundColor : "#FFFFFF"
-	});
-	
-	window.add(tableView);
 	
 	galleryButton.addEventListener('click', function() {
 		window.fireEvent('openPhotoGallery', {});
@@ -103,94 +86,27 @@ exports.createMainWindow = function() {
 		window.fireEvent('takePhoto', {});
 	});
 	
-	createButton.addEventListener('click', function() {
-		window.fireEvent('add', {});
-	});
-	
-	window.refresh = function(entries) {
+	window.refresh = function(entries, imageBlob) {
 		var rows = [];
+		mapview.annotations = [];
 		for (var i = 0; i < entries.length; i++) {
-			var row = Ti.UI.createTableViewRow({
-				layout : "horizontal"
+			var item = TiMap.createAnnotation({
+			    latitude: entries[i].latitude,
+			    longitude: entries[i].longitude,
+			    title:"Appcelerator Headquarters",
+			    subtitle:'Mountain View, CA',
+			    pincolor:TiMap.ANNOTATION_RED,
+			    animate:true,
+			    // image: Ti.UI.createView({
+			    	// height : 100,
+			    	// width : 50,
+			    	// backgroundImage : entries[i].imagePath
+			    // }).toImage()
 			});
-			
-			row.add(Ti.UI.createImageView({
-				height : Ti.UI.SIZE,
-				width : Ti.UI.SIZE,
-				color : "#333399",
-				left : "10px",
-				font: { fontSize:28 },
-			}));
-			
-			row.add(Ti.UI.createLabel({
-				height : Ti.UI.SIZE,
-				width : Ti.UI.SIZE,
-				text : entries[i].latitude,
-				color : "#333399",
-				left : "130px",
-				font: { fontSize:28 },
-			}));
-			rows.push(row);
-		}
-		tableView.data = rows;
+			rows.push(item);
+		};
+		mapview.annotations = rows;
 	};
-	return window;
-};
-
-exports.createAddWindow = function() {
-	var window = Ti.UI.createWindow({
-		backgroundColor : "#ffffff",
-		title : "Create Entry",
-		textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
-		font: { fontSize:28 },
-		top : 20,
-		layout : "vertical",
-		navBarHidden : true
-	});
-	
-	var navView = Ti.UI.createView({
-		height : Ti.UI.SIZE,
-		width : "100%",
-		backgroundColor : "#000080"
-	});
-	navView.add(Ti.UI.createLabel({
-		text : "create new entry",
-		textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
-		font: { fontSize:28 },
-		top : 20
-	}));
-	var buttonCancel = Ti.UI.createButton({
-		title : "cancel",
-		left : 0
-	});
-	navView.add(buttonCancel);
-	var buttonCommit = Ti.UI.createButton({
-		title : "Save",
-		textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
-		font: { fontSize:28 },
-		top : 20,
-		right : 0
-	});
-	navView.add(buttonCommit);
-	window.add(navView);
-	
-	var textInput = Ti.UI.createTextArea({
-		width : "100%",
-		height : Ti.UI.FILL	
-	});
-	window.add(textInput);
-	
-	buttonCancel.addEventListener('click', function(){
-		window.close();
-	});
-	
-	buttonCommit.addEventListener('click', function(){
-		var vl = textInput.value.trim();
-		if (vl.length > 0)
-			window.fireEvent('save', {
-				entry : textInput.value
-			});
-	});
 	return window;
 };
 
