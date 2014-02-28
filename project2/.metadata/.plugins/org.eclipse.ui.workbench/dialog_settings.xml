@@ -22,4 +22,6 @@
 			<item value="com.appcelerator.titanium.new.wizard.category"/>
 		</list>
 	</section>
+	<section name="ImportExportAction">
+	</section>
 </section>

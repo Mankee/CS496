@@ -1,5 +1,4 @@
 var TiMap = require('ti.map');
-
 exports.createMainWindow = function() {
 	
 	var window = Titanium.UI.createWindow({
@@ -24,8 +23,6 @@ exports.createMainWindow = function() {
 		top : 20
 	}));
 	
-
-	
 	var photoButton = Ti.UI.createButton({
 		title : "  Take Photo  ",
 		textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
@@ -42,21 +39,34 @@ exports.createMainWindow = function() {
 	});
 	navView.add(galleryButton);
 	
-	window.add(navView);
+	var refreshButton = Ti.UI.createButton({
+		title : "  Refresh  ",
+		textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+		font: { fontSize:28 },
+		top : 20
+	});
+	navView.add(refreshButton);
 	
+	refreshButton.addEventListener('click', function() {
+		mapview.removeAllAnnotations();
+		mapview.annotations = userInterface.refreshAnnotations(database.listEntries());
+	});
+	
+	window.add(navView);
 	var mapview = TiMap.createView({
 	    mapType: TiMap.NORMAL_TYPE,
 	    region: {latitude:44.56734, longitude:-123.27853,
-	             latitudeDelta:0.01, longitudeDelta:0.01},
+	             latitudeDelta:10, longitudeDelta:10},
 	    animate:true,
 	    regionFit:true,
 	    userLocation:true,
-	    annotations:database.listEntries(),
+	    annotations: userInterface.refreshAnnotations(database.listEntries()),
 	    height : "100%"
 	});
 
 	window.add(mapview);
 	// Handle click events on any annotations on this map.
+	
 	mapview.addEventListener('click', function(evt) {
 	    Ti.API.info("Annotation " + evt.title + " clicked, id: " + evt.annotation.myid);
 	
@@ -67,16 +77,6 @@ exports.createMainWindow = function() {
 	        Ti.API.info("Annotation " + evt.title + ", left button clicked.");
 	    }
 	});
-
-	// For the iOS platform, wait for the complete event to ensure the region is set
-	if (Ti.Platform.name == 'iPhone OS') {
-	    mapview.addEventListener('complete', function(evt){
-	        mapview.region = {
-	            latitude:44.56734, longitude:-123.27853,
-	            latitudeDelta:0.1, longitudeDelta:0.1
-	        };
-	    });
-	}
 	
 	galleryButton.addEventListener('click', function() {
 		window.fireEvent('openPhotoGallery', {});
@@ -85,29 +85,28 @@ exports.createMainWindow = function() {
 	photoButton.addEventListener('click', function() {
 		window.fireEvent('takePhoto', {});
 	});
-	
-	window.refresh = function(entries, imageBlob) {
-		var rows = [];
-		mapview.annotations = [];
-		for (var i = 0; i < entries.length; i++) {
-			var item = TiMap.createAnnotation({
-			    latitude: entries[i].latitude,
-			    longitude: entries[i].longitude,
-			    title:"Appcelerator Headquarters",
-			    subtitle:'Mountain View, CA',
-			    pincolor:TiMap.ANNOTATION_RED,
-			    animate:true,
-			    // image: Ti.UI.createView({
-			    	// height : 100,
-			    	// width : 50,
-			    	// backgroundImage : entries[i].imagePath
-			    // }).toImage()
-			});
-			rows.push(item);
-		};
-		mapview.annotations = rows;
-	};
 	return window;
+};
+	
+exports.refreshAnnotations = function(entries) {
+	var rows = [];
+	for (var i = 0; i < entries.length; i++) {
+		var item = TiMap.createAnnotation({
+		    latitude: entries[i].latitude,
+		    longitude: entries[i].longitude,
+		    title: "Photo ID# " + entries[i].id,
+		    subtitle: "Latitude: " + entries[i].latitude + ", Longitude: " + entries[i].longitude,
+		    pincolor:TiMap.ANNOTATION_RED,
+		    animate:true,
+		    image: Ti.UI.createView({
+		    	height : 100,
+		    	width : 50,
+		    	backgroundImage : entries[i].imagePath
+		    }).toImage()
+		});
+		rows.push(item);
+	};
+	return rows;
 };
 
 exports.createFullImageWindow = function(imageBlob, imageFile) {

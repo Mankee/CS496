@@ -2,11 +2,12 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
 		<item value="false" key="wholeword"/>
-		<item value="-" key="selection"/>
+		<item value="send" key="selection"/>
 		<list key="findhistory">
+			<item value="send"/>
 			<item value="-"/>
 			<item value="mapview"/>
 			<item value="mapView"/>
@@ -14,7 +15,6 @@
 			<item value="createtableviewrow"/>
 			<item value="databaes"/>
 			<item value="file"/>
-			<item value="filename"/>
 		</list>
 	</section>
 </section>
