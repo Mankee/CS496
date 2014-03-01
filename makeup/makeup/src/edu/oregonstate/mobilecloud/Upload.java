@@ -2,11 +2,8 @@ package edu.oregonstate.mobilecloud;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 import javax.jdo.PersistenceManager;
 import javax.servlet.ServletException;
@@ -18,16 +15,10 @@ import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.io.IOUtils;
 
-import com.google.appengine.api.blobstore.BlobKey;
-import com.google.appengine.api.blobstore.BlobstoreService;
-import com.google.appengine.api.blobstore.BlobstoreServiceFactory;
-
 import edu.oregonstate.mobilecloud.PMF;
 
 @SuppressWarnings("serial")
 public class Upload extends HttpServlet {
-	private BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService();
-	
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException {
 		handle(request, response);
