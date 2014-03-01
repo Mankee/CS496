@@ -1,4 +1,5 @@
 package edu.oregonstate.mobilecloud;
+import java.util.Date;
 import java.util.List;
 
 import javax.jdo.PersistenceManager;
@@ -22,6 +23,18 @@ public class Kitten {
 	@Persistent
 	private Blob photo;
 	
+	@Persistent
+	private int battles;
+	
+	@Persistent
+	private int wins;
+	
+	@Persistent
+	private Date dateCreated;
+	
+	@Persistent
+	private Date lastModified;
+	
 	public Long getID() {
 		return id;
 	}
@@ -34,12 +47,38 @@ public class Kitten {
 		return photo != null ? photo.getBytes() : new byte[0];
 	}
 	
+	public int getBattles() {
+		return battles;
+	}
+	
+	public int getWins() {
+		return battles;
+	}
+	
+	public Date getDateCreated() {
+		return dateCreated;
+	}
+	
+	public Date getLastModified() {
+		return lastModified;
+	}
+	
 	public void setName(String newName) {
 		this.name = newName;
+		this.dateCreated = new Date();
+		this.lastModified = new Date();
 	}
 	
 	public void setPhoto(byte[] photo) {
 		this.photo = new Blob(photo != null ? photo : new byte[0]);
+	}
+	
+	public void setBattles(int battles) {
+		this.battles = battles;
+	}
+	
+	public void setWins(int wins) {
+		this.wins = wins;
 	}
 	
 	@SuppressWarnings("unchecked")
