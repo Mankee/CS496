@@ -4,18 +4,20 @@ import java.util.List;
 
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
+import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
 import com.google.appengine.api.datastore.Blob;
+import com.google.appengine.api.datastore.Key;
 
 @PersistenceCapable
 public class Kitten {
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-	private Long id;
+	private Key key;
 	
 	@Persistent
 	private String name;
@@ -36,15 +38,23 @@ public class Kitten {
 	private Date lastModified;
 	
 	public Long getID() {
-		return id;
+		return key.getId();
 	}
 	
 	public String getName() {
 		return name;
 	}
 	
+	@Persistent
+    @Extension(vendorName="datanucleus", key="gae.unindexed", value="true")
+    private String imageType;
+	
 	public byte[] getPhoto() {
-		return photo != null ? photo.getBytes() : new byte[0];
+		if (photo == null) {
+			return null;
+		} else {
+			return photo.getBytes();
+		}
 	}
 	
 	public int getBattles() {
@@ -89,13 +99,25 @@ public class Kitten {
 		List<Kitten> results = (List<Kitten>) query.execute(kittenName);
 		boolean exists = results != null && results.size() > 0;
 		query.closeAll();
+		pm.close();
 		return exists;
 	}
 	
-	@SuppressWarnings("unchecked")
-	public static List<Kitten> getKittens(PersistenceManager pm) {
+	public static Kitten getKitten(String kittenName, PersistenceManager pm) {
 		Query query = pm.newQuery(Kitten.class);
-		List<Kitten> results = (List<Kitten>) query.execute();
-		return results;
-	}
+        query.setFilter("name == kittenNameParam");
+        query.declareParameters("String KittenNameParam");
+        query.setRange(0, 1);
+    
+        List<Kitten> results = (List<Kitten>) query.execute(kittenName);
+        if (results.size() == 1) {
+        	query.closeAll();
+        	pm.close();
+        	return results.get(0);
+        } else {
+        	query.closeAll();
+            pm.close();
+        	return new Kitten();
+        }
+    }
 }

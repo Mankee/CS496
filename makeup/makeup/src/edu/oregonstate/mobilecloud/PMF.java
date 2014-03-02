@@ -11,5 +11,5 @@ public final class PMF {
 		return pmfInstance;
 	}
 	
-	private PMF() {};
+	PMF() {};
 }

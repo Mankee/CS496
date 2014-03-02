@@ -10,15 +10,14 @@
 		<title>Kitties</title>
 	</head>
 	<body>
-		<H1>checking server to see if upload was sucessfull</H1>
-		
 		<%
+			// check is last post was sucessfull
 			if(request.getAttribute("message") == "success") {
-				out.write(request.getAttribute("name") + " has sucessfully been added to the cloud");	
+				out.write(request.getAttribute("name") + " has been sucessfully uploaded to heaven (the cloud, get it?)...");	
 			} else {
-				out.write("failure");
+				out.write(request.getAttribute("message").toString());
 			}
-		
 		%>
+			
 	</body>
 </html>

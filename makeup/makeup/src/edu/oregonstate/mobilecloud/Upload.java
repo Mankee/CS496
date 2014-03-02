@@ -33,14 +33,12 @@ public class Upload extends HttpServlet {
 		String resp = "fail";
 		String contentType = request.getContentType();
 	    System.out.println(contentType);
-        
+	    Kitten kitten = new Kitten();
+    	PersistenceManager pm = PMF.getPMF().getPersistenceManager();
 	    if (contentType != null && contentType.startsWith("multipart/form-data")) {	
-		  
-	    	Kitten kitten = new Kitten();
 			try {
 				ServletFileUpload upload = new ServletFileUpload();
 				FileItemIterator iter = upload.getItemIterator(request);
-				PersistenceManager pm = PMF.getPMF().getPersistenceManager();
 				int counter = 0;
 				List<String> unknownFields = new ArrayList<>();
 				while (iter.hasNext() && counter < 100) {
@@ -65,7 +63,6 @@ public class Upload extends HttpServlet {
 					pm.makePersistent(kitten);
 					request.setAttribute("name", kitten.getName());
 					resp = "success";
-					pm.close();
 				} else if (counter >= 100) {
 					resp = "Too many fields submitted";
 				}
@@ -79,13 +76,12 @@ public class Upload extends HttpServlet {
 			catch (FileUploadException e) {
 				e.printStackTrace();
 			}
-		} else if (contentType == null) {
-			resp = "content-type is null!";
 		} else {
-			resp = "Content-Type: " + contentType + " did not match content-type : \"multipart/form-data\"";
+			resp = "Content-Type: " + contentType + " did not match content-type : \"multipart/form-data\"... Are you suppose to be here?";
 		}
 		response.setContentType("text/plain");
 		request.setAttribute("message", resp);
+		pm.close();
 		try {
 			request.getRequestDispatcher("/main.jsp").forward(request, response);
 		} catch (ServletException e) {
