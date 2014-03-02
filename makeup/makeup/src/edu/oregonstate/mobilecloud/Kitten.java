@@ -1,6 +1,8 @@
 package edu.oregonstate.mobilecloud;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
@@ -104,20 +106,40 @@ public class Kitten {
 	}
 	
 	public static Kitten getKitten(String kittenName, PersistenceManager pm) {
-		Query query = pm.newQuery(Kitten.class);
-        query.setFilter("name == kittenNameParam");
-        query.declareParameters("String KittenNameParam");
-        query.setRange(0, 1);
+		Query query = pm.newQuery(Kitten.class, "name == kittenName");
+		query.setFilter("name == kittenName");
+		query.declareParameters("String kittenName");
     
         List<Kitten> results = (List<Kitten>) query.execute(kittenName);
-        if (results.size() == 1) {
-        	query.closeAll();
-        	pm.close();
+        if (!results.isEmpty()) {
+        	System.out.println("number of results found:" + results.size());
         	return results.get(0);
         } else {
-        	query.closeAll();
-            pm.close();
         	return new Kitten();
         }
     }
+	
+	public static List getTwoRandomKittens() {
+		PersistenceManager pm = new PMF().getPMF().getPersistenceManager();
+		Query query = pm.newQuery(Kitten.class);
+		List<Kitten> results = (List<Kitten>) query.execute();
+		List<Kitten> boxOfKittens = new ArrayList<Kitten>();
+		if (!results.isEmpty()) {
+			if (results.size() >= 2) {
+				Random randomGenerator = new Random();
+				int index1 = randomGenerator.nextInt(results.size());
+				int index2 = randomGenerator.nextInt(results.size());
+				boxOfKittens.add(results.get(index1));
+				boxOfKittens.add(results.get(index2));
+				return boxOfKittens;
+				
+			} else {
+				System.out.println("not enough cats in datastore to fulfill request");
+				return null;
+			}
+		} else {
+			System.out.println("No cats in datastore");
+			return null;
+		}
+	}
 }

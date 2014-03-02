@@ -2,13 +2,7 @@ package edu.oregonstate.mobilecloud;
 
 import edu.oregonstate.mobilecloud.Kitten;
 
-import java.io.BufferedOutputStream;
-import java.io.Closeable;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 import javax.jdo.PersistenceManager;
 import javax.servlet.ServletException;
@@ -39,7 +33,8 @@ public class ImageServlet extends HttpServlet {
             response.sendError(HttpServletResponse.SC_NOT_FOUND); // 404.
             return;
         }
-        PersistenceManager pm = new PMF().getPMF().getPersistenceManager();
+        new PMF();
+		PersistenceManager pm = PMF.getPMF().getPersistenceManager();
         Kitten kitten = Kitten.getKitten(kittenName, pm);
         
         byte[] image = kitten.getPhoto();
