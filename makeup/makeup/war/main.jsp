@@ -31,10 +31,10 @@
 			if (twoKittensFromTheLitter != null && twoKittensFromTheLitter.size() == 2) {
 				kitten1 =  twoKittensFromTheLitter.get(0);
 				kitten2 =  twoKittensFromTheLitter.get(1);
-				out.write("<br><a href=\"http://localhost:8888\">upload more photos</a>");
+				out.write("<br><a href=\"/index.html\">upload more photos</a>");
 			} else {
 				out.write("Please add more photos");
-				out.write("<br><a href=\"http://localhost:8888\">upload more photos</a>");
+				out.write("<br><a href=\"/index.html\">upload more photos</a>");
 			}
 			pm.close();
 		%>

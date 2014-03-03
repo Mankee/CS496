@@ -2,7 +2,6 @@
 <cronentries>
   <cron>
     <url>/cron</url>
-    <description>delete 25% of photos everyone 2 minutes</description>
-    <schedule>every 2 seconds</schedule>
+    <schedule>every 2 minutes from 00:00 to 23:00</schedule>
   </cron>
 </cronentries>

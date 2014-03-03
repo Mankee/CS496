@@ -21,4 +21,13 @@ public class Cron extends HttpServlet {
 		pm.close();
 		response.sendRedirect("/main.jsp");
     }
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	        throws ServletException, IOException
+	    {
+			PersistenceManager pm = (PersistenceManager) new PMF().getPMF().getPersistenceManager();
+			Kitten.deleteKittens(pm);
+			pm.close();
+			response.sendRedirect("/main.jsp");
+	    }
 }
