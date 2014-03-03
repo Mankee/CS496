@@ -4,6 +4,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
+import org.apache.commons.lang3.ArrayUtils;
+
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 import javax.jdo.annotations.Extension;
@@ -17,6 +19,10 @@ import com.google.appengine.api.datastore.Key;
 
 @PersistenceCapable
 public class Kitten {
+	private static final Kitten[] Random = null;
+
+	private static final Kitten[][] Kitten = null;
+
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	private Key key;
@@ -64,7 +70,7 @@ public class Kitten {
 	}
 	
 	public int getWins() {
-		return battles;
+		return wins;
 	}
 	
 	public Date getDateCreated() {
@@ -119,18 +125,27 @@ public class Kitten {
         }
     }
 	
-	public static List getTwoRandomKittens() {
-		PersistenceManager pm = new PMF().getPMF().getPersistenceManager();
+	public static List getRandomKittens(int numberOfKittens, PersistenceManager pm) {
 		Query query = pm.newQuery(Kitten.class);
 		List<Kitten> results = (List<Kitten>) query.execute();
-		List<Kitten> boxOfKittens = new ArrayList<Kitten>();
+		List<Kitten> boxOfKittens = new ArrayList<>();
+		Kitten[] kittenArray = new Kitten[results.size()];
+		kittenArray = results.toArray(kittenArray);
 		if (!results.isEmpty()) {
 			if (results.size() >= 2) {
 				Random randomGenerator = new Random();
-				int index1 = randomGenerator.nextInt(results.size());
-				int index2 = randomGenerator.nextInt(results.size());
-				boxOfKittens.add(results.get(index1));
-				boxOfKittens.add(results.get(index2));
+				if (numberOfKittens == 0) {
+					numberOfKittens = results.size();
+				} else if (numberOfKittens > results.size()) {
+					numberOfKittens = results.size();
+				}
+				int counter = 0;
+				for (int i = 0; i < numberOfKittens; i++) {
+					int index = randomGenerator.nextInt(kittenArray.length);
+					Kitten kitten = kittenArray[index];
+					boxOfKittens.add(kitten);
+					kittenArray = ArrayUtils.remove(kittenArray, index);
+				}
 				return boxOfKittens;
 				
 			} else {
@@ -140,6 +155,37 @@ public class Kitten {
 		} else {
 			System.out.println("No cats in datastore");
 			return null;
+		}
+	}
+	
+	public static List getRankings(int topRanks, PersistenceManager pm) {
+		Query query = pm.newQuery(Kitten.class);
+		query.setOrdering("wins desc");
+		List<Kitten> results = (List<Kitten>) query.execute();
+		List<Kitten> kittens = new ArrayList<>();
+		int counter = 0;
+		for (Kitten kitten : results) {
+			if (kitten != null && counter < topRanks) {
+				counter++;
+				System.out.println(counter);
+				kittens.add(kitten);
+			}
+		}
+		return kittens;
+	}
+	
+	public static void deleteKittens(PersistenceManager pm) {
+		Query query = pm.newQuery(Kitten.class);
+		query.setOrdering("lastModified ascending");
+		
+		List<Kitten> results = (List<Kitten>) query.execute(Kitten.class);
+		Kitten[] kittenArray = new Kitten[results.size()];
+		kittenArray = results.toArray(kittenArray);
+		System.out.println(kittenArray.length);
+		double quarterOfKittens = (double) kittenArray.length / 4;
+		double numberOfKittensToDelete = Math.ceil(quarterOfKittens);
+		for (int i = 0; i < numberOfKittensToDelete; i++) {		
+			pm.deletePersistent(kittenArray[i]);
 		}
 	}
 }
