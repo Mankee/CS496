@@ -9,8 +9,21 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import org.apache.http.*;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MyGeoLocation extends Activity implements LocationListener{
     TextView textLat;
@@ -29,7 +42,30 @@ public class MyGeoLocation extends Activity implements LocationListener{
 
         textLat = (TextView) findViewById(R.id.textLatitude);
         textLong = (TextView) findViewById(R.id.textLongitude);
+        Button button = (Button) findViewById(R.id.buttonSendCoordinates);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Create a new HttpClient and Post Header
+                HttpClient httpclient = new DefaultHttpClient();
+                HttpPost httppost = new HttpPost("http://192.168.1.10:8888");
 
+                try {
+                    // Add your data
+                    List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
+                    nameValuePairs.add(new BasicNameValuePair("id", "12345"));
+                    nameValuePairs.add(new BasicNameValuePair("stringdata", "AndDev is Cool!"));
+                    httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+
+                    // Execute HTTP Post Request
+                    HttpResponse response = httpclient.execute(httppost);
+
+                } catch (ClientProtocolException e) {
+                    // TODO Auto-generated catch block
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                }
+            }
+        });
         locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
 
         //http://www.vogella.com/tutorials/AndroidLocationAPI/article.html
@@ -70,8 +106,8 @@ public class MyGeoLocation extends Activity implements LocationListener{
 
     @Override
     public void onLocationChanged(Location location) {
-        double lat = (double) (location.getLatitude());
-        double lng = (double) (location.getLongitude());
+        double lat = location.getLatitude();
+        double lng = location.getLongitude();
         textLat.setText(String.valueOf(lat));
         textLong.setText(String.valueOf(lng));
     }
