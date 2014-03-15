@@ -31,11 +31,11 @@
             android:id="@+id/buttonSendCoordinates" android:layout_gravity="center" android:textSize="20dp" android:padding="10dp"
             android:paddingLeft="10dp" android:paddingTop="10dp" android:paddingRight="10dp"
             android:paddingBottom="10dp" android:singleLine="true" android:textAlignment="center"
-            android:longClickable="true"/>
-    <WebView
+            android:longClickable="true" android:onClick="buttonClick"/>
+    <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/webView" android:layout_gravity="center" android:textAlignment="center"
-            android:visibility="visible" android:focusableInTouchMode="false" android:focusable="false"/>
+            android:text="Notifications"
+            android:id="@+id/textNotifications" android:layout_gravity="center" android:onClick="buttonClick"/>
 </LinearLayout>
 

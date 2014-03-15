@@ -8,9 +8,9 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Message;
 import android.provider.Settings;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import org.apache.http.*;
@@ -31,7 +31,6 @@ public class MyGeoLocation extends Activity implements LocationListener{
     LocationManager locationManager;
     String provider;
 
-
     /**
      * Called when the activity is first created.
      */
@@ -42,30 +41,6 @@ public class MyGeoLocation extends Activity implements LocationListener{
 
         textLat = (TextView) findViewById(R.id.textLatitude);
         textLong = (TextView) findViewById(R.id.textLongitude);
-        Button button = (Button) findViewById(R.id.buttonSendCoordinates);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Create a new HttpClient and Post Header
-                HttpClient httpclient = new DefaultHttpClient();
-                HttpPost httppost = new HttpPost("http://192.168.1.10:8888");
-
-                try {
-                    // Add your data
-                    List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
-                    nameValuePairs.add(new BasicNameValuePair("id", "12345"));
-                    nameValuePairs.add(new BasicNameValuePair("stringdata", "AndDev is Cool!"));
-                    httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
-
-                    // Execute HTTP Post Request
-                    HttpResponse response = httpclient.execute(httppost);
-
-                } catch (ClientProtocolException e) {
-                    // TODO Auto-generated catch block
-                } catch (IOException e) {
-                    // TODO Auto-generated catch block
-                }
-            }
-        });
         locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
 
         //http://www.vogella.com/tutorials/AndroidLocationAPI/article.html
@@ -122,7 +97,6 @@ public class MyGeoLocation extends Activity implements LocationListener{
     public void onProviderEnabled(String provider) {
         Toast.makeText(this, "Enabled new provider " + provider,
                 Toast.LENGTH_SHORT).show();
-
     }
 
     @Override
@@ -130,4 +104,38 @@ public class MyGeoLocation extends Activity implements LocationListener{
         Toast.makeText(this, "Disabled provider " + provider,
                 Toast.LENGTH_SHORT).show();
     }
+
+    public void buttonClick(View view) {
+        Runnable runnable = new Runnable() {
+            public void run() {
+                // Create a new HttpClient and Post Header
+                HttpClient httpclient = new DefaultHttpClient();
+                HttpPost httppost = new HttpPost("http://192.168.1.2:8888/image?kittenName=brando");
+                HttpResponse response = null;
+
+                try {
+                    // Add your data
+                    List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
+                    nameValuePairs.add(new BasicNameValuePair("id", "12345"));
+                    nameValuePairs.add(new BasicNameValuePair("stringdata", "AndDev is Cool!"));
+                    httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+
+                    // Execute HTTP Post Request
+                    response = httpclient.execute(httppost);
+
+                } catch (ClientProtocolException e) {
+                    // TODO Auto-generated catch block
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                }
+                System.out.println("test");
+
+                System.out.println(response.toString());
+            }
+        };
+
+        Thread mythread = new Thread(runnable);
+        mythread.start();
+    }
+
 }
