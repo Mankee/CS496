@@ -57,4 +57,15 @@ public class Location  {
     	System.out.println("number of results found:" + results.size());	
         return results;
 	}
+	
+	public static void deleteRandomLocation(PersistenceManager pm) {
+		Query query = pm.newQuery(Location.class);
+		@SuppressWarnings("unchecked")
+		List<Location> results = (List<Location>) query.execute();
+		System.out.println("number of results found:" + results.size());
+		int randomIndex = (int) (Math.random() * results.size() + 1);
+		Location locationToDelete = results.get(randomIndex);
+		pm.deletePersistent(locationToDelete);
+		pm.close();
+	}
 }

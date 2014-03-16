@@ -62,7 +62,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="884709d3-2e1b-41e1-87ce-1ba8149e87c0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/src/edu/oregonstate/mobilecloud/ServerServlet.java" afterPath="$PROJECT_DIR$/webserver/src/edu/oregonstate/mobilecloud/ServerServlet.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/lib/appengine-api-1.0-sdk-1.8.9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/lib/appengine-api-labs.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/lib/appengine-endpoints-deps.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/lib/appengine-endpoints.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/lib/appengine-jsr107cache-1.8.9.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/lib/jsr107cache-1.1.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/.classpath" afterPath="$PROJECT_DIR$/webserver/.classpath" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/.settings/com.google.appengine.eclipse.core.prefs" afterPath="$PROJECT_DIR$/webserver/.settings/com.google.appengine.eclipse.core.prefs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NeoGeo.iws" />
@@ -85,6 +92,7 @@
     <file path="$PROJECT_DIR$/gen/com/example/NeoGeo/BuildConfig.java" changelist="884709d3-2e1b-41e1-87ce-1ba8149e87c0" time="1394940269121" ignored="false" />
     <file path="$PROJECT_DIR$/libs/res/layout/main.xml" changelist="884709d3-2e1b-41e1-87ce-1ba8149e87c0" time="1394940318724" ignored="false" />
     <file path="/main.xml" changelist="884709d3-2e1b-41e1-87ce-1ba8149e87c0" time="1394943398327" ignored="false" />
+    <file path="$PROJECT_DIR$/atlassian-ide-plugin.xml" changelist="884709d3-2e1b-41e1-87ce-1ba8149e87c0" time="1395001187300" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
