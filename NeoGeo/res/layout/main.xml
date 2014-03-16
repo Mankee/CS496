@@ -33,9 +33,11 @@
             android:paddingBottom="10dp" android:singleLine="true" android:textAlignment="center"
             android:longClickable="true" android:onClick="buttonClick"/>
     <TextView
+            android:editable = "true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Notifications"
-            android:id="@+id/textNotifications" android:layout_gravity="center" android:onClick="buttonClick"/>
+            android:id="@+id/textNotifications" android:layout_gravity="center" android:selectAllOnFocus="false"
+            android:inputType="text" android:textStyle="bold" android:visibility="visible" android:singleLine="false"/>
 </LinearLayout>
 

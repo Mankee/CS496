@@ -8,7 +8,6 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.os.Message;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
@@ -17,23 +16,20 @@ import android.widget.Toast;
 import org.apache.http.*;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONException;
-import org.json.JSONObject;
+
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MyGeoLocation extends Activity implements LocationListener{
-    private static final String logTag = "logs";
     TextView textLat;
     TextView textLong;
+    TextView textNotifications;
     LocationManager locationManager;
     String provider;
 
@@ -117,19 +113,25 @@ public class MyGeoLocation extends Activity implements LocationListener{
                 // Create a new HttpClient and Post Header
                 HttpClient httpclient = new DefaultHttpClient();
                 HttpPost httppost = new HttpPost("http://192.168.1.2:8888/image");
-
                 try {
                     // Add your data
                     List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
                     nameValuePairs.add(new BasicNameValuePair("latitude", (String) textLat.getText()));
-                    nameValuePairs.add(new BasicNameValuePair("latitude", (String) textLat.getText()));
-                    nameValuePairs.add(new BasicNameValuePair("response", "Sucess"));
+                    nameValuePairs.add(new BasicNameValuePair("longitude", (String) textLong.getText()));
                     httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
-
                     // Execute HTTP Post Request
-                    ResponseHandler<String> responseHandler = new BasicResponseHandler();
-                    String responseBody = httpclient.execute(httppost, responseHandler);
-                    Log.w("MyGeolocation", responseBody);
+                    final HttpResponse response = httpclient.execute(httppost);
+                    Log.d("logs", response.getStatusLine().toString());
+
+                    //spin off another thread to post back to the UI. This insures outer thread does not die before text is done being set.
+                    if (response.getStatusLine() != null) {
+                        textNotifications = (TextView) findViewById(R.id.textNotifications);
+                        textNotifications.post(new Runnable() {
+                            public void run() {
+                                textNotifications.setText("Success");
+                            }
+                        });
+                    }
                 } catch (ClientProtocolException e) {
                     e.printStackTrace();
                 } catch (IOException e) {
@@ -137,7 +139,6 @@ public class MyGeoLocation extends Activity implements LocationListener{
                 }
             }
         };
-
         Thread mythread = new Thread(runnable);
         mythread.start();
     }

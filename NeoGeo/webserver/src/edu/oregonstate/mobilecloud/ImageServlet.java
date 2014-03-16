@@ -56,8 +56,12 @@ public class ImageServlet extends HttpServlet {
 	    	// Get ID from request.
 	        String latitude = request.getParameter("latitude");
 	        String longitude = request.getParameter("longitude");
-	        response.setContentType("text/plain");
-			
+	        if (!latitude.isEmpty() && !longitude.isEmpty()) {
+//	        	response.setContentType("text/plain");
+				request.setAttribute("response", "success");
+		
+	        }
+	        
 	    } else {
 	    	resp = "Content-Type: " + contentType + " did not match content-type : \"multipart/form-data\"... Are you suppose to be here?";
 	    }
