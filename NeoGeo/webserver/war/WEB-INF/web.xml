@@ -5,36 +5,12 @@ xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet>
-		<servlet-name>Upload</servlet-name>
-		<servlet-class>edu.oregonstate.mobilecloud.Upload</servlet-class>
+		<servlet-name>Location</servlet-name>
+		<servlet-class>edu.oregonstate.mobilecloud.ServerServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Upload</servlet-name>
-		<url-pattern>/upload</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>Image</servlet-name>
-		<servlet-class>edu.oregonstate.mobilecloud.ImageServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>Image</servlet-name>
-		<url-pattern>/image</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>Vote</servlet-name>
-		<servlet-class>edu.oregonstate.mobilecloud.VotingServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>Vote</servlet-name>
-		<url-pattern>/vote</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>Cron</servlet-name>
-		<servlet-class>edu.oregonstate.mobilecloud.Cron</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>Cron</servlet-name>
-		<url-pattern>/cron</url-pattern>
+		<servlet-name>Location</servlet-name>
+		<url-pattern>/location</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
