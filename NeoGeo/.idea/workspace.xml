@@ -62,38 +62,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="884709d3-2e1b-41e1-87ce-1ba8149e87c0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/src/edu/oregonstate/mobilecloud/ImageServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/src/edu/oregonstate/mobilecloud/Kitten.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/src/edu/oregonstate/mobilecloud/PMF.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/src/edu/oregonstate/mobilecloud/Upload.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/src/edu/oregonstate/mobilecloud/Util.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/src/edu/oregonstate/mobilecloud/VotingServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/appengine-generated/datastore-indexes-auto.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/appengine-generated/local_db.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/cron.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/javascript/jquery-2.1.0.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/lib/commons-fileupload-1.3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/lib/commons-io-2.4-javadoc.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/lib/commons-io-2.4-sources.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/lib/commons-io-2.4-test-sources.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/lib/commons-io-2.4-tests.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/lib/commons-io-2.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/lib/commons-lang3-3.2.1-javadoc.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/lib/commons-lang3-3.2.1-sources.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/lib/commons-lang3-3.2.1-test-sources.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/lib/commons-lang3-3.2.1-tests.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/lib/commons-lang3-3.2.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webserver/war/main.jsp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/.classpath" afterPath="$PROJECT_DIR$/webserver/.classpath" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/.project" afterPath="$PROJECT_DIR$/webserver/.project" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/src/edu/oregonstate/mobilecloud/Cron.java" afterPath="$PROJECT_DIR$/webserver/src/edu/oregonstate/mobilecloud/Cron.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/NeoGeo/MyGeoLocation.java" afterPath="$PROJECT_DIR$/src/com/example/NeoGeo/MyGeoLocation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/appengine-web.xml" afterPath="$PROJECT_DIR$/webserver/war/WEB-INF/appengine-web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/.settings/com.google.appengine.eclipse.core.prefs" afterPath="$PROJECT_DIR$/webserver/.settings/com.google.appengine.eclipse.core.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/war/index.html" afterPath="$PROJECT_DIR$/webserver/war/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/.settings/org.eclipse.jdt.core.prefs" afterPath="$PROJECT_DIR$/webserver/.settings/org.eclipse.jdt.core.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/webserver/war/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/src/edu/oregonstate/mobilecloud/ServerServlet.java" afterPath="$PROJECT_DIR$/webserver/src/edu/oregonstate/mobilecloud/ServerServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NeoGeo.iws" />
@@ -268,19 +237,12 @@
       <file leaf-file-name="MyGeoLocation.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/NeoGeo/MyGeoLocation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="82" selection-start="3822" selection-end="3822" vertical-scroll-proportion="0.38557994">
+            <state line="110" column="0" selection-start="3539" selection-end="3539" vertical-scroll-proportion="0.17981073">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3567#5961#0" expanded="true" />
+                <element signature="e#5950#5951#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BufferedHeader.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///usr/local/Cellar/android-sdk/22.3/platforms/android-18/android.jar!/org/apache/http/message/BufferedHeader.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="28" selection-start="795" selection-end="795" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -593,7 +555,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13953489" sideWeight="0.6712185" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32878152" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32878152" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16646267" sideWeight="0.603936" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -700,6 +662,8 @@
         <state line="24" column="26" selection-start="654" selection-end="654" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3567#5961#0" expanded="true" />
+            <element signature="e#5950#5951#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -784,9 +748,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/NeoGeo/MyGeoLocation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="82" selection-start="3822" selection-end="3822" vertical-scroll-proportion="0.38557994">
+        <state line="110" column="0" selection-start="3539" selection-end="3539" vertical-scroll-proportion="0.17981073">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3567#5961#0" expanded="true" />
+            <element signature="e#5950#5951#0" expanded="true" />
           </folding>
         </state>
       </provider>
