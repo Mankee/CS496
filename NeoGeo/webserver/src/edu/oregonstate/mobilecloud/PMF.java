@@ -7,8 +7,9 @@ public class PMF {
 	private static final PersistenceManagerFactory pmfInstance =
 			JDOHelper.getPersistenceManagerFactory("transactions-optional");
 		
-	public static PersistenceManagerFactory getPMF() {
-		return pmfInstance;
-	}
-	public PMF() {};
+		public static PersistenceManagerFactory getPMF() {
+			return pmfInstance;
+		}
+		
+		public PMF() {};
 }

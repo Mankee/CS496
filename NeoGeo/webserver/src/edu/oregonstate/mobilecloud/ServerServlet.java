@@ -10,7 +10,6 @@ import javax.servlet.http.*;
 
 @SuppressWarnings("serial")
 public class ServerServlet extends HttpServlet {
-	
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		resp.setContentType("text/plain");
@@ -18,10 +17,7 @@ public class ServerServlet extends HttpServlet {
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-	        throws ServletException, IOException
-    {
-		PersistenceManagerFactory pmf  = JDOHelper.getPersistenceManagerFactory("transactions-optional");
-		
+	        throws ServletException, IOException {	
 		Location location = new Location();
 		String contentType = request.getContentType();
 	    System.out.println(contentType);
@@ -31,8 +27,10 @@ public class ServerServlet extends HttpServlet {
 	        String longitude = request.getParameter("longitude");
 	        if (!latitude.isEmpty() && !longitude.isEmpty()) {
 	        	location.setLocation(latitude, longitude);
-	    		pmf.getPersistenceManager().makePersistent(location);
-	        	
+	        	new PMF();
+				PersistenceManager pm = PMF.getPMF().getPersistenceManager();
+	        	pm.makePersistent(location);
+	        	pm.close();
 	        	response.setContentType("text/plain");
 				response.setHeader("response", "success");
 	        }
