@@ -52,20 +52,16 @@ public class ImageServlet extends HttpServlet {
 		String resp = "fail";
 		String contentType = request.getContentType();
 	    System.out.println(contentType);
-	    if (contentType != null) {
+	    if (contentType != null && contentType == "application/x-www-form-urlencoded") {
 	    	// Get ID from request.
-	        String winningKittenName = request.getParameter("id");
-	        String losingKittenName = request.getParameter("losingKitten");
+	        String latitude = request.getParameter("latitude");
+	        String longitude = request.getParameter("longitude");
+	        response.setContentType("text/plain");
+			
 	    } else {
 	    	resp = "Content-Type: " + contentType + " did not match content-type : \"multipart/form-data\"... Are you suppose to be here?";
 	    }
-	    response.setContentType("text/plain");
-		request.setAttribute("message", resp);
-		try {
-			request.getRequestDispatcher("/main.jsp").forward(request, response);
-		} catch (ServletException e) {
-			e.printStackTrace();
-		}
+	   
     }
     
     

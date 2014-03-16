@@ -10,22 +10,28 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Message;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 import org.apache.http.*;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MyGeoLocation extends Activity implements LocationListener{
+    private static final String logTag = "logs";
     TextView textLat;
     TextView textLong;
     LocationManager locationManager;
@@ -110,27 +116,25 @@ public class MyGeoLocation extends Activity implements LocationListener{
             public void run() {
                 // Create a new HttpClient and Post Header
                 HttpClient httpclient = new DefaultHttpClient();
-                HttpPost httppost = new HttpPost("http://192.168.1.2:8888/image?kittenName=brando");
-                HttpResponse response = null;
+                HttpPost httppost = new HttpPost("http://192.168.1.2:8888/image");
 
                 try {
                     // Add your data
                     List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
-                    nameValuePairs.add(new BasicNameValuePair("id", "12345"));
-                    nameValuePairs.add(new BasicNameValuePair("stringdata", "AndDev is Cool!"));
+                    nameValuePairs.add(new BasicNameValuePair("latitude", (String) textLat.getText()));
+                    nameValuePairs.add(new BasicNameValuePair("latitude", (String) textLat.getText()));
+                    nameValuePairs.add(new BasicNameValuePair("response", "Sucess"));
                     httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 
                     // Execute HTTP Post Request
-                    response = httpclient.execute(httppost);
-
+                    ResponseHandler<String> responseHandler = new BasicResponseHandler();
+                    String responseBody = httpclient.execute(httppost, responseHandler);
+                    Log.w("MyGeolocation", responseBody);
                 } catch (ClientProtocolException e) {
-                    // TODO Auto-generated catch block
+                    e.printStackTrace();
                 } catch (IOException e) {
-                    // TODO Auto-generated catch block
+                    e.printStackTrace();
                 }
-                System.out.println("test");
-
-                System.out.println(response.toString());
             }
         };
 
