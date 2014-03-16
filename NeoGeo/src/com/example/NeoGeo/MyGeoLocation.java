@@ -113,6 +113,7 @@ public class MyGeoLocation extends Activity implements LocationListener{
                 // Create a new HttpClient and Post Header
                 HttpClient httpclient = new DefaultHttpClient();
                 HttpPost httppost = new HttpPost("http://192.168.1.2:8888/image");
+
                 try {
                     // Add your data
                     List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
@@ -121,20 +122,33 @@ public class MyGeoLocation extends Activity implements LocationListener{
                     httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
                     // Execute HTTP Post Request
                     final HttpResponse response = httpclient.execute(httppost);
-                    Log.d("logs", response.getStatusLine().toString());
-
-                    //spin off another thread to post back to the UI. This insures outer thread does not die before text is done being set.
-                    if (response.getStatusLine() != null) {
-                        textNotifications = (TextView) findViewById(R.id.textNotifications);
-                        textNotifications.post(new Runnable() {
-                            public void run() {
-                                textNotifications.setText("Success");
+                        Log.d("logs", response.getStatusLine().toString());
+                        Header[] headers = response.getAllHeaders();
+                        String responseText = null;
+                        for (Header header : headers) {
+                            if (header.getName().equals("response")) {
+                                responseText = header.getValue();
                             }
-                        });
-                    }
+                        }
+                        //spin off another thread to post back to the UI. This insures outer thread does not die before text is done being set.
+                        if (responseText.equals("success")) {
+                            textNotifications = (TextView) findViewById(R.id.textNotifications);
+                            textNotifications.post(new Runnable() {
+                                public void run() {
+                                    textNotifications.setText("Success");
+                                }
+                            });
+                        }
+
                 } catch (ClientProtocolException e) {
                     e.printStackTrace();
                 } catch (IOException e) {
+                    textNotifications = (TextView) findViewById(R.id.textNotifications);
+                    textNotifications.post(new Runnable() {
+                        public void run() {
+                            textNotifications.setText("Failure");
+                        }
+                    });
                     e.printStackTrace();
                 }
             }

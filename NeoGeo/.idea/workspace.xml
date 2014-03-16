@@ -62,16 +62,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="884709d3-2e1b-41e1-87ce-1ba8149e87c0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/commons-io-2.4-javadoc.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/commons-io-2.4-sources.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/commons-io-2.4-test-sources.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/commons-io-2.4-tests.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/commons-io-2.4.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/apidocs.xml" afterPath="$PROJECT_DIR$/.idea/libraries/commons_io.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/src/edu/oregonstate/mobilecloud/ImageServlet.java" afterPath="$PROJECT_DIR$/webserver/src/edu/oregonstate/mobilecloud/ImageServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/NeoGeo/MyGeoLocation.java" afterPath="$PROJECT_DIR$/src/com/example/NeoGeo/MyGeoLocation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NeoGeo.iml" afterPath="$PROJECT_DIR$/NeoGeo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NeoGeo.iws" />
@@ -79,7 +71,7 @@
     <file path="$PROJECT_DIR$/../final/atlassian-ide-plugin.xml" changelist="884709d3-2e1b-41e1-87ce-1ba8149e87c0" time="1394825744626" ignored="false" />
     <file path="/Dummy.txt" changelist="884709d3-2e1b-41e1-87ce-1ba8149e87c0" time="1394941454154" ignored="false" />
     <file path="$PROJECT_DIR$/.idea/vcs.xml" changelist="884709d3-2e1b-41e1-87ce-1ba8149e87c0" time="1394825758007" ignored="false" />
-    <file path="/MyGeoLocation.java" changelist="884709d3-2e1b-41e1-87ce-1ba8149e87c0" time="1394944954423" ignored="false" />
+    <file path="/MyGeoLocation.java" changelist="884709d3-2e1b-41e1-87ce-1ba8149e87c0" time="1394947402169" ignored="false" />
     <file path="/fragment.java" changelist="884709d3-2e1b-41e1-87ce-1ba8149e87c0" time="1394939427424" ignored="false" />
     <file path="/LocationListener.java" changelist="884709d3-2e1b-41e1-87ce-1ba8149e87c0" time="1394834340168" ignored="false" />
     <file path="/GPSManager.java" changelist="884709d3-2e1b-41e1-87ce-1ba8149e87c0" time="1394845186144" ignored="false" />
@@ -162,7 +154,52 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/example/NeoGeo/MyGeoLocation.java" line="127" class="com.example.NeoGeo.MyGeoLocation$1" package="com.example.NeoGeo">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/NeoGeo/MyGeoLocation.java" line="134" class="com.example.NeoGeo.MyGeoLocation$1" package="com.example.NeoGeo">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/NeoGeo/MyGeoLocation.java" line="120" class="com.example.NeoGeo.MyGeoLocation$1" package="com.example.NeoGeo">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/NeoGeo/MyGeoLocation.java" line="124" class="com.example.NeoGeo.MyGeoLocation$1" package="com.example.NeoGeo">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/NeoGeo/MyGeoLocation.java" line="145" class="com.example.NeoGeo.MyGeoLocation$1" package="com.example.NeoGeo">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -202,15 +239,26 @@
       <file leaf-file-name="MyGeoLocation.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/NeoGeo/MyGeoLocation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="0" selection-start="4666" selection-end="4666" vertical-scroll-proportion="0.60567826">
+            <state line="153" column="0" selection-start="5935" selection-end="5935" vertical-scroll-proportion="0.66027874">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3567#5240#0" expanded="true" />
-                <element signature="e#3952#3967#0" expanded="true" />
-                <element signature="e#4806#4996#0" expanded="true" />
-                <element signature="e#4969#4970#0" expanded="true" />
-                <element signature="e#5229#5230#0" expanded="true" />
+                <element signature="e#3567#5958#0" expanded="true" />
+                <element signature="e#3953#3968#0" expanded="true" />
+                <element signature="e#5194#5400#0" expanded="true" />
+                <element signature="e#5369#5370#0" expanded="true" />
+                <element signature="e#5699#5873#0" expanded="true" />
+                <element signature="e#5850#5851#0" expanded="true" />
+                <element signature="e#5947#5948#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BufferedHeader.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///usr/local/Cellar/android-sdk/22.3/platforms/android-18/android.jar!/org/apache/http/message/BufferedHeader.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="28" selection-start="795" selection-end="795" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -591,7 +639,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16646267" sideWeight="0.603936" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32983193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -604,14 +652,14 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13953489" sideWeight="0.6712185" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13953489" sideWeight="0.60399157" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32878152" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21882543" sideWeight="0.603936" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3960084" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3960084" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282887" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -722,11 +770,13 @@
         <state line="24" column="26" selection-start="654" selection-end="654" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3567#5240#0" expanded="true" />
-            <element signature="e#3952#3967#0" expanded="true" />
-            <element signature="e#4806#4996#0" expanded="true" />
-            <element signature="e#4969#4970#0" expanded="true" />
-            <element signature="e#5229#5230#0" expanded="true" />
+            <element signature="e#3567#5958#0" expanded="true" />
+            <element signature="e#3953#3968#0" expanded="true" />
+            <element signature="e#5194#5400#0" expanded="true" />
+            <element signature="e#5369#5370#0" expanded="true" />
+            <element signature="e#5699#5873#0" expanded="true" />
+            <element signature="e#5850#5851#0" expanded="true" />
+            <element signature="e#5947#5948#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -797,13 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/local/Cellar/android-sdk/22.3/platforms/android-18/android.jar!/org/apache/http/message/BufferedHeader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="28" selection-start="795" selection-end="795" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -821,16 +864,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///usr/local/Cellar/android-sdk/22.3/platforms/android-18/android.jar!/org/apache/http/message/BufferedHeader.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="28" selection-start="795" selection-end="795" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/NeoGeo/MyGeoLocation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="0" selection-start="4666" selection-end="4666" vertical-scroll-proportion="0.60567826">
+        <state line="153" column="0" selection-start="5935" selection-end="5935" vertical-scroll-proportion="0.66027874">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3567#5240#0" expanded="true" />
-            <element signature="e#3952#3967#0" expanded="true" />
-            <element signature="e#4806#4996#0" expanded="true" />
-            <element signature="e#4969#4970#0" expanded="true" />
-            <element signature="e#5229#5230#0" expanded="true" />
+            <element signature="e#3567#5958#0" expanded="true" />
+            <element signature="e#3953#3968#0" expanded="true" />
+            <element signature="e#5194#5400#0" expanded="true" />
+            <element signature="e#5369#5370#0" expanded="true" />
+            <element signature="e#5699#5873#0" expanded="true" />
+            <element signature="e#5850#5851#0" expanded="true" />
+            <element signature="e#5947#5948#0" expanded="true" />
           </folding>
         </state>
       </provider>

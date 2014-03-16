@@ -59,6 +59,7 @@ public class ImageServlet extends HttpServlet {
 	        if (!latitude.isEmpty() && !longitude.isEmpty()) {
 //	        	response.setContentType("text/plain");
 				request.setAttribute("response", "success");
+				response.setHeader("response", "success");
 		
 	        }
 	        
