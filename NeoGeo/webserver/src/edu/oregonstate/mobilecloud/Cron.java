@@ -18,17 +18,21 @@ public class Cron extends HttpServlet {
 	        throws ServletException, IOException
 	    {
 			PersistenceManager pm = (PersistenceManager) new PMF().getPMF().getPersistenceManager();
-			Location.deleteRandomLocation(pm);
+			if (Location.getLocations(pm).size() > 0) {
+				Location.deleteRandomLocation(pm);
+			}
 			pm.close();
-//			response.sendRedirect("/main.jsp");
+			response.sendRedirect("/index.jsp");
 	    }
 		
 		protected void doGet(HttpServletRequest request, HttpServletResponse response)
 		        throws ServletException, IOException
 	    {
 			PersistenceManager pm = (PersistenceManager) new PMF().getPMF().getPersistenceManager();
-			Location.deleteRandomLocation(pm);
+			if (Location.getLocations(pm).size() > 0) {
+				Location.deleteRandomLocation(pm);
+			}
 			pm.close();
-//				response.sendRedirect("/main.jsp");
+			response.sendRedirect("/index.jsp");
 	    }	
 }
