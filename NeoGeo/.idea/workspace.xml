@@ -62,17 +62,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="884709d3-2e1b-41e1-87ce-1ba8149e87c0" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webserver/war/index.html" afterPath="$PROJECT_DIR$/webserver/war/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/appengine-generated/local_db.bin" afterPath="$PROJECT_DIR$/webserver/war/WEB-INF/appengine-generated/local_db.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/src/edu/oregonstate/mobilecloud/Cron.java" afterPath="$PROJECT_DIR$/webserver/src/edu/oregonstate/mobilecloud/Cron.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/NeoGeo/MyGeoLocation.java" afterPath="$PROJECT_DIR$/src/com/example/NeoGeo/MyGeoLocation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/appengine-web.xml" afterPath="$PROJECT_DIR$/webserver/war/WEB-INF/appengine-web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/.settings/com.google.appengine.eclipse.core.prefs" afterPath="$PROJECT_DIR$/webserver/.settings/com.google.appengine.eclipse.core.prefs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/appengine-generated/datastore-indexes-auto.xml" afterPath="$PROJECT_DIR$/webserver/war/WEB-INF/appengine-generated/datastore-indexes-auto.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webserver/war/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/webserver/war/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NeoGeo.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/../final/atlassian-ide-plugin.xml" changelist="884709d3-2e1b-41e1-87ce-1ba8149e87c0" time="1394825744626" ignored="false" />
-    <file path="/Dummy.txt" changelist="884709d3-2e1b-41e1-87ce-1ba8149e87c0" time="1395021690845" ignored="false" />
+    <file path="/Dummy.txt" changelist="884709d3-2e1b-41e1-87ce-1ba8149e87c0" time="1395032750975" ignored="false" />
     <file path="/MyGeoLocation.java" changelist="884709d3-2e1b-41e1-87ce-1ba8149e87c0" time="1394947402169" ignored="false" />
     <file path="/fragment.java" changelist="884709d3-2e1b-41e1-87ce-1ba8149e87c0" time="1394939427424" ignored="false" />
     <file path="/LocationListener.java" changelist="884709d3-2e1b-41e1-87ce-1ba8149e87c0" time="1394834340168" ignored="false" />
@@ -89,6 +88,7 @@
     <file path="$PROJECT_DIR$/gen/com/example/NeoGeo/BuildConfig.java" changelist="884709d3-2e1b-41e1-87ce-1ba8149e87c0" time="1394940269121" ignored="false" />
     <file path="$PROJECT_DIR$/libs/res/layout/main.xml" changelist="884709d3-2e1b-41e1-87ce-1ba8149e87c0" time="1394940318724" ignored="false" />
     <file path="/main.xml" changelist="884709d3-2e1b-41e1-87ce-1ba8149e87c0" time="1394943398327" ignored="false" />
+    <file path="$PROJECT_DIR$/atlassian-ide-plugin.xml" changelist="884709d3-2e1b-41e1-87ce-1ba8149e87c0" time="1395033202007" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,6 +180,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -216,7 +217,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -241,7 +241,7 @@
       <file leaf-file-name="MyGeoLocation.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/NeoGeo/MyGeoLocation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="0" selection-start="3539" selection-end="3539" vertical-scroll-proportion="0.23764458">
+            <state line="114" column="92" selection-start="3832" selection-end="3832" vertical-scroll-proportion="0.2849632">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -339,11 +339,11 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="true" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -386,19 +386,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -425,6 +412,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -533,12 +533,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32983193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32965687" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -557,13 +556,14 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13953489" sideWeight="0.6722689" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13953489" sideWeight="0.6722689" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277311" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16646267" sideWeight="0.603936" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21882543" sideWeight="0.603936" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32965687" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -746,7 +746,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/NeoGeo/MyGeoLocation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="0" selection-start="3539" selection-end="3539" vertical-scroll-proportion="0.23764458">
+        <state line="114" column="92" selection-start="3832" selection-end="3832" vertical-scroll-proportion="0.2849632">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

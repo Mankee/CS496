@@ -112,7 +112,7 @@ public class MyGeoLocation extends Activity implements LocationListener{
             public void run() {
                 // Create a new HttpClient and Post Header
                 HttpClient httpclient = new DefaultHttpClient();
-                HttpPost httppost = new HttpPost("http://192.168.1.2:8888/location");
+                HttpPost httppost = new HttpPost("http://dubinalocation.appspot.com/location");
 
                 try {
                     // Add your data
